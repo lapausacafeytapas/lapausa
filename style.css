@@ -21,7 +21,7 @@ header button{background:#222}
 .producto{display:flex;justify-content:space-between;gap:20px;padding:15px;border-bottom:1px solid #333}
 .producto p{margin:6px 0 0}
 
-.bottom-bar{position:fixed;bottom:0;left:0;width:100%;display:flex;justify-content:space-around;align-items:center;background:#111;border-top:1px solid #2b2b2b;padding:10px 0;z-index:999}
+.bottom-bar{position:fixed;bottom:0;left:0;width:100%;display:flex;justify-content:space-around;align-items:center;background:#111;border-top:1px solid #2b2b2b;padding:10px 0;z-index:999;height:70px}
 .bottom-bar a{color:#fff}
 .bottom-bar svg{width:28px;height:28px;display:block}
 .screen,.content{padding-bottom:70px}
@@ -69,6 +69,10 @@ border-radius:8px;
 .leyenda-subcategoria{margin:0 0 14px;padding:0 4px;color:#bdbdbd;font-size:.9rem;font-style:italic;font-weight:400;letter-spacing:.2px}
 
 @media (max-width: 768px){
+  body{
+    overflow:hidden;
+  }
+
   .hero,
   .hero img{
     height:calc(100svh - 70px);
@@ -77,7 +81,7 @@ border-radius:8px;
   .hero img{
     object-fit:cover;
     object-position:center top;
-    transform:translateY(-18px);
+    transform:translateY(-40px);
   }
 
   .hero{
@@ -87,33 +91,40 @@ border-radius:8px;
 
   #inicio{
     height:100svh;
+    min-height:100svh;
+    overflow:hidden;
+  }
+
+  #inicio.active{
+    display:block;
   }
 
   #inicio .content{
     min-height:calc(100svh - 70px);
+    height:calc(100svh - 70px);
     justify-content:center;
-    padding-top:20px;
-    padding-bottom:20px;
+    padding:16px 20px 16px;
+    overflow:hidden;
   }
 
   .logo{
-    width:min(190px,50vw);
-    margin-bottom:16px;
+    width:min(170px,46vw);
+    margin-bottom:14px;
   }
 
   h1{
-    font-size:clamp(1.6rem,6.5vw,2.4rem);
+    font-size:clamp(1.45rem,6vw,2.15rem);
     margin-bottom:10px;
   }
 
   p{
-    font-size:.98rem;
-    line-height:1.4;
-    margin-bottom:18px;
+    font-size:.94rem;
+    line-height:1.35;
+    margin-bottom:16px;
   }
 
   button{
-    padding:13px 28px;
+    padding:12px 24px;
   }
 
   .categorias,
