@@ -25,12 +25,14 @@ header button{background:#222}
 .bottom-bar{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);width:calc(100% - 24px);max-width:420px;display:flex;justify-content:space-around;align-items:center;background:#111;border:1px solid #2b2b2b;border-radius:18px;padding:10px 0;z-index:999;height:58px;box-shadow:0 10px 24px rgba(0,0,0,.28)}
 .bottom-bar a{color:#fff}
 .bottom-bar svg{width:28px;height:28px;display:block}
-.screen,.content{padding-bottom:70px}
+.screen{padding-bottom:70px}
+.content{padding-bottom:70px}
 
 #inicio{
   height:100dvh;
   min-height:100dvh;
   overflow:hidden;
+  padding-bottom:0;
 }
 
 #inicio .hero,
@@ -41,7 +43,7 @@ header button{background:#222}
 
 #inicio .content{
   min-height:calc(100dvh - 82px);
-  padding-bottom:82px;
+  padding-bottom:0;
 }
 
 .alergenos{
@@ -91,6 +93,7 @@ border-radius:8px;
     height:100svh;
     min-height:100svh;
     overflow:hidden;
+    padding-bottom:0;
   }
 
   #inicio .hero,
@@ -113,7 +116,7 @@ border-radius:8px;
   #inicio .content{
     min-height:calc(100svh - 82px);
     justify-content:center;
-    padding:10px 18px 82px;
+    padding:10px 18px 0;
     overflow:hidden;
   }
 
