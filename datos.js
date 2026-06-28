@@ -77,30 +77,37 @@ const PRODUCTOS = {
   desayunos: [
     {
       nombre: "Tostada tradicional",
-      descripcion: "Desayuno.",
-      precio: "2,80",
-      alergenos: "G",
-      por_unidad: false
-    },
-    {
-      nombre: "Tostada especial",
-      descripcion: "Desayuno.",
-      precio: "3,80",
-      alergenos: "G",
-      por_unidad: false
-    },
-    {
-      nombre: "Desayuno dulce",
-      descripcion: "Desayuno.",
+      descripcion: "Aceite, tomate o mantequilla y mermelada.",
       precio: "2,80",
       alergenos: "G,L",
       por_unidad: false
     },
     {
+      nombre: "Tostada especial",
+      descripcion: "Tomate con atún, tomate con jamón, tomate con queso fresco y anchoas, queso crema y salmón ahumado.",
+      precio: "3,80",
+      alergenos: "G,L,P",
+      por_unidad: false
+    },
+    {
+      nombre: "Desayuno dulce",
+      descripcion: "Una pieza de bollería dulce.",
+      precio: "2,80",
+      alergenos: "G,L,H",
+      por_unidad: false
+    },
+    {
       nombre: "Desayuno salado",
-      descripcion: "Desayuno.",
-      precio: "3,00",
-      alergenos: "G",
+      descripcion: "Una pieza de bollería salada.",
+      precio: "3,20",
+      alergenos: "G,L,H",
+      por_unidad: false
+    },
+    {
+      nombre: "Suplemento zumo de naranja natural",
+      descripcion: "Complemento para desayuno.",
+      precio: "1,50",
+      alergenos: "",
       por_unidad: false
     }
   ],
@@ -108,46 +115,147 @@ const PRODUCTOS = {
   almuerzos: [
     {
       nombre: "Bocadillo del día",
-      descripcion: "Almuerzo.",
-      precio: "6,50",
+      descripcion: "Nuestra propuesta de hoy.",
+      precio: "7,00",
       alergenos: "G",
       por_unidad: false
     },
     {
       nombre: "Bocadillo de carta",
-      descripcion: "Almuerzo.",
+      descripcion: "Elige uno de la lista.",
       precio: "8,00",
       alergenos: "G",
       por_unidad: false
     },
     {
+      nombre: "Suplemento Tercio de cerveza",
+      descripcion: "Amstel, Heineken o Estrella Galicia.",
+      precio: "0,50",
+      alergenos: "G",
+      por_unidad: false
+    },
+    {
+      nombre: "Suplemento Cremaet",
+      descripcion: "Complemento para almuerzo.",
+      precio: "1,00",
+      alergenos: "SU",
+      por_unidad: false
+    },
+    {
       nombre: "Gasto",
-      descripcion: "Suplemento.",
-      precio: "",
+      descripcion: "Si estás trabajando, trae tu bocadillo. Incluye una bebida y café.",
+      precio: "3,00",
       alergenos: "",
+      por_unidad: false
+    }
+  ],
+
+  bocadillosdecarta: [
+    {
+      nombre: "Pau",
+      descripcion: "Lomo, queso, bacon y huevo frito.",
+      precio: "",
+      alergenos: "G,L,H",
+      por_unidad: false
+    },
+    {
+      nombre: "Chivito",
+      descripcion: "Lomo/pechuga, bacon, queso, tomate, lechuga, huevo y mayonesa.",
+      precio: "",
+      alergenos: "G,L,H",
+      por_unidad: false
+    },
+    {
+      nombre: "Brascada",
+      descripcion: "Ternera, jamón y cebolla caramelizada.",
+      precio: "",
+      alergenos: "G",
+      por_unidad: false
+    },
+    {
+      nombre: "Vegetal",
+      descripcion: "Lechuga, tomate, mahonesa, atún, aceitunas y huevo duro.",
+      precio: "",
+      alergenos: "G,H,P",
+      por_unidad: false
+    },
+    {
+      nombre: "Almussafes",
+      descripcion: "Sobrasada, queso y cebolla caramelizada.",
+      precio: "",
+      alergenos: "G,L",
+      por_unidad: false
+    },
+    {
+      nombre: "El pecador",
+      descripcion: "Chistorra con patatas y huevo frito.",
+      precio: "",
+      alergenos: "G,H",
+      por_unidad: false
+    },
+    {
+      nombre: "Clásico",
+      descripcion: "Tortilla de patata con mahonesa/ajoaceite.",
+      precio: "",
+      alergenos: "G,H",
+      por_unidad: false
+    },
+    {
+      nombre: "El de la Terreta",
+      descripcion: "Longanizas con patatas.",
+      precio: "",
+      alergenos: "G",
+      por_unidad: false
+    },
+    {
+      nombre: "Manchego",
+      descripcion: "Oreja a la plancha con salsa mery.",
+      precio: "",
+      alergenos: "G,MO",
+      por_unidad: false
+    },
+    {
+      nombre: "Pastor",
+      descripcion: "Bacon, queso de cabra y pimientos verdes.",
+      precio: "",
+      alergenos: "G,L",
+      por_unidad: false
+    },
+    {
+      nombre: "Blanc i negre",
+      descripcion: "Longaniza con morcilla.",
+      precio: "",
+      alergenos: "G",
+      por_unidad: false
+    },
+    {
+      nombre: "Francés",
+      descripcion: "Tomate, tortilla francesa y jamón.",
+      precio: "",
+      alergenos: "G,H",
       por_unidad: false
     }
   ],
 
   menudeldia: [
     {
-      nombre: "1 Primero + 1 Segundo",
+      nombre: "1 primero y 1 segundo",
       descripcion: "Menú del día.",
-      precio: "12,50",
+      precio: "13,00",
       alergenos: "",
       por_unidad: false
     },
     {
-      nombre: "2 Segundos",
+      nombre: "2 segundos",
       descripcion: "Menú del día.",
-      precio: "13,50",
+      precio: "14,00",
       alergenos: "",
       por_unidad: false
     },
     {
       nombre: "Plato único",
       descripcion: "Menú del día.",
-      precio: "11,00",
+      precio: "10,00",
       alergenos: "",
       por_unidad: false
     }
