@@ -14,6 +14,7 @@ const ESTRUCTURA_CARTA = {
     subcategorias: [
       { id: 'desayunos', titulo: 'Desayunos' },
       { id: 'almuerzos', titulo: 'Almuerzos' },
+      { id: 'bocadillosdecarta', titulo: 'Bocadillos de carta' },
       { id: 'menudeldia', titulo: 'Menú del día' }
     ]
   },
@@ -132,11 +133,11 @@ function renderSubcategorias(id) {
 
 function abrirSubcategoria(categoriaId, subcategoriaId, titulo) {
   if (categoriaId === 'bebidas') {
-    renderProductos(titulo, PRODUCTOS.bebidas[subcategoriaId] || []);
+    renderProductos(titulo, PRODUCTOS.bebidas[subcategoriaId] || [], subcategoriaId);
     return;
   }
 
-  renderProductos(titulo, PRODUCTOS[subcategoriaId] || []);
+  renderProductos(titulo, PRODUCTOS[subcategoriaId] || [], subcategoriaId);
 }
 
 function renderProductos(titulo, productos, claveLeyenda = null) {
