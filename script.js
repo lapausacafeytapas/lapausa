@@ -67,6 +67,13 @@ function generarProductos() {
     if (container && productos) {
       container.innerHTML = '';
 
+      if (categoria === 'desayunos') {
+        const leyenda = document.createElement('div');
+        leyenda.className = 'leyenda-subcategoria';
+        leyenda.textContent = 'Incluye tostada o bollería y café';
+        container.appendChild(leyenda);
+      }
+
       if (categoria === 'almuerzos') {
         const leyenda = document.createElement('div');
         leyenda.className = 'leyenda-subcategoria';
