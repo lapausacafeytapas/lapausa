@@ -16,7 +16,7 @@ header button{background:#222}
 .categorias{display:flex;gap:6px;overflow:auto;padding:15px}
 .categorias button{background:#222;border:1px solid var(--verde)}
 .subcategorias{display:flex;gap:6px;overflow:auto;padding:15px;background:#1a1a1a}
-.subcategorias button{background:#222;border:1px solid #444;font-size:0.9rem}
+.subcategorias button{background:#222;border:1px solid var(--verde);font-size:0.9rem}
 .grupo{padding:15px}.oculto{display:none}
 .producto{display:flex;justify-content:space-between;gap:20px;padding:15px;border-bottom:1px solid #333}
 .producto p{margin:6px 0 0}
