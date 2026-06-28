@@ -660,6 +660,48 @@ const PRODUCTOS = {
         precio: "",
         alergenos: "",
         por_unidad: false
+      },
+      {
+        nombre: "Copa de casalla",
+        descripcion: "",
+        precio: "",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "Copa de anís",
+        descripcion: "",
+        precio: "",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "Copa de mistela",
+        descripcion: "",
+        precio: "",
+        alergenos: "SU",
+        por_unidad: false
+      },
+      {
+        nombre: "Barrejat",
+        descripcion: "Cassalla con mistela",
+        precio: "",
+        alergenos: "SU",
+        por_unidad: false
+      },
+      {
+        nombre: "Chupito",
+        descripcion: "",
+        precio: "",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "Vaquerito",
+        descripcion: "",
+        precio: "",
+        alergenos: "",
+        por_unidad: false
       }
     ],
     combinados: [
