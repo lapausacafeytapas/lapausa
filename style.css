@@ -76,7 +76,8 @@ border-radius:8px;
 
   .hero img{
     object-fit:cover;
-    object-position:center center;
+    object-position:center top;
+    transform:translateY(-18px);
   }
 
   .hero{
