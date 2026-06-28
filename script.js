@@ -81,6 +81,13 @@ function generarProductos() {
         container.appendChild(leyenda);
       }
 
+      if (categoria === 'menudeldia') {
+        const leyenda = document.createElement('div');
+        leyenda.className = 'leyenda-subcategoria';
+        leyenda.textContent = 'Incluye una bebida, pan y postre o café';
+        container.appendChild(leyenda);
+      }
+
       productos.forEach(producto => {
         const productoHTML = document.createElement('div');
         productoHTML.className = 'producto';
