@@ -578,85 +578,85 @@ const PRODUCTOS = {
     ],
     copas: [
       {
-        nombre: "Vermut",
-        descripcion: "Copa.",
+        nombre: "Copa de vermouth tinto o blanco",
+        descripcion: "",
         precio: "",
         alergenos: "SU",
         por_unidad: false
       },
       {
-        nombre: "Coñac",
-        descripcion: "Copa.",
+        nombre: "Copa de coñac",
+        descripcion: "",
         precio: "",
         alergenos: "",
         por_unidad: false
       },
       {
-        nombre: "Copa Orujo de hierbas",
-        descripcion: "Copa.",
+        nombre: "Copa de orujo de hierbas",
+        descripcion: "",
         precio: "",
         alergenos: "",
         por_unidad: false
       },
       {
-        nombre: "Copa crema de orujo",
-        descripcion: "Copa.",
+        nombre: "Copa de crema de orujo",
+        descripcion: "",
         precio: "",
         alergenos: "L",
         por_unidad: false
       },
       {
-        nombre: "Copa Orujo blanco",
-        descripcion: "Copa.",
+        nombre: "Copa de orujo blanco",
+        descripcion: "",
         precio: "",
         alergenos: "",
         por_unidad: false
       },
       {
-        nombre: "Copa limoncello",
-        descripcion: "Copa.",
+        nombre: "Copa de limoncello",
+        descripcion: "",
         precio: "",
         alergenos: "",
         por_unidad: false
       },
       {
-        nombre: "Copa licor de arroz",
-        descripcion: "Copa.",
+        nombre: "Copa de licor de arroz",
+        descripcion: "",
         precio: "",
         alergenos: "",
         por_unidad: false
       },
       {
-        nombre: "Copa Baileys",
-        descripcion: "Copa.",
+        nombre: "Copa de baileys",
+        descripcion: "",
         precio: "",
         alergenos: "L",
         por_unidad: false
       },
       {
-        nombre: "Copa Whisky",
-        descripcion: "Copa.",
+        nombre: "Copa de whisky",
+        descripcion: "",
         precio: "",
         alergenos: "",
         por_unidad: false
       },
       {
-        nombre: "Copa Ron",
-        descripcion: "Copa.",
+        nombre: "Copa de ron",
+        descripcion: "",
         precio: "",
         alergenos: "",
         por_unidad: false
       },
       {
-        nombre: "Copa Vodka",
-        descripcion: "Copa.",
+        nombre: "Copa de vodka",
+        descripcion: "",
         precio: "",
         alergenos: "",
         por_unidad: false
       },
       {
-        nombre: "Copa Ginebra",
-        descripcion: "Copa.",
+        nombre: "Copa de ginebra",
+        descripcion: "",
         precio: "",
         alergenos: "",
         por_unidad: false
