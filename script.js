@@ -17,21 +17,18 @@ function mostrarInicio() {
 }
 
 // ==========================================
-// CAMBIO DE CATEGORÍAS - ARREGLADO
+// CAMBIO DE CATEGORÍAS
 // ==========================================
 function cat(id, btn) {
-  // Ocultar todos los contenedores
   document.querySelectorAll('.categorias-container').forEach(container => {
     container.classList.add('oculto');
   });
-  
-  // Mostrar el contenedor seleccionado
+
   const container = document.getElementById(id + '-container');
   if (container) {
     container.classList.remove('oculto');
   }
-  
-  // Actualizar botón activo
+
   document.querySelectorAll('.categorias button').forEach(b => {
     b.classList.remove('active-cat');
   });
@@ -39,21 +36,18 @@ function cat(id, btn) {
 }
 
 // ==========================================
-// CAMBIO DE SUBCATEGORÍAS (BEBIDAS)
+// CAMBIO DE SUBCATEGORÍAS
 // ==========================================
 function subcat(id, btn) {
-  // Ocultar todos los subcontenedores
   document.querySelectorAll('.subcategorias-container').forEach(container => {
     container.classList.add('oculto');
   });
-  
-  // Mostrar el subcontenedor seleccionado
+
   const container = document.getElementById(id + '-subcont');
   if (container) {
     container.classList.remove('oculto');
   }
-  
-  // Actualizar botón activo
+
   document.querySelectorAll('.subcategorias button').forEach(b => {
     b.classList.remove('active-subcat');
   });
@@ -64,20 +58,19 @@ function subcat(id, btn) {
 // GENERAR PRODUCTOS DESDE DATOS
 // ==========================================
 function generarProductos() {
-  const categorias = ['cafes', 'tapas', 'principales', 'postres'];
-  
+  const categorias = ['cafes', 'desayunos', 'almuerzos', 'menudeldia', 'tardes', 'viernesysabado'];
+
   categorias.forEach(categoria => {
-    const container = document.getElementById(categoria + '-container');
+    const container = document.getElementById(categoria + '-container') || document.getElementById(categoria + '-subcont');
     const productos = PRODUCTOS[categoria];
-    
+
     if (container && productos) {
       container.innerHTML = '';
-      
+
       productos.forEach(producto => {
         const productoHTML = document.createElement('div');
         productoHTML.className = 'producto';
-        
-        // Procesar alérgenos
+
         let alergenosText = '';
         if (producto.alergenos) {
           const codigosAlergenos = producto.alergenos.split(',').map(c => c.trim());
@@ -85,14 +78,13 @@ function generarProductos() {
             .map(codigo => ALERGENOS[codigo] || codigo)
             .join(' · ');
         }
-        
-        // Procesar precio con sufijo €/u si es por unidad
+
         let precioText = '';
         if (producto.precio) {
           const sufijo = producto.por_unidad ? '€/u' : '€';
           precioText = producto.precio + ' ' + sufijo;
         }
-        
+
         productoHTML.innerHTML = `
           <div>
             <h3>${producto.nombre}</h3>
@@ -101,13 +93,12 @@ function generarProductos() {
           </div>
           <strong>${precioText}</strong>
         `;
-        
+
         container.appendChild(productoHTML);
       });
     }
   });
 
-  // Generar bebidas con submenús
   generarBebidas();
 }
 
@@ -115,20 +106,19 @@ function generarProductos() {
 // GENERAR BEBIDAS CON SUBMENÚS
 // ==========================================
 function generarBebidas() {
-  const subcategorias = ['tintos', 'blancos', 'cervezas', 'refrescos', 'aguas'];
-  
+  const subcategorias = ['refrescos', 'cervezas', 'blancos', 'tintos', 'copas', 'combinados'];
+
   subcategorias.forEach(subcategoria => {
     const container = document.getElementById(subcategoria + '-subcont');
     const productos = PRODUCTOS.bebidas[subcategoria];
-    
+
     if (container && productos) {
       container.innerHTML = '';
-      
+
       productos.forEach(producto => {
         const productoHTML = document.createElement('div');
         productoHTML.className = 'producto';
-        
-        // Procesar alérgenos
+
         let alergenosText = '';
         if (producto.alergenos) {
           const codigosAlergenos = producto.alergenos.split(',').map(c => c.trim());
@@ -136,11 +126,9 @@ function generarBebidas() {
             .map(codigo => ALERGENOS[codigo] || codigo)
             .join(' · ');
         }
-        
-        // Mostrar precios según el tipo
+
         let precioHTML = '';
         if (producto.precio_copa && producto.precio_botella) {
-          // Vinos con precio de copa y botella
           precioHTML = `
             <div class="producto-precios">
               <div>
@@ -154,11 +142,10 @@ function generarBebidas() {
             </div>
           `;
         } else if (producto.precio) {
-          // Otras bebidas
           const sufijo = producto.por_unidad ? '€/u' : '€';
           precioHTML = `<strong>${producto.precio} ${sufijo}</strong>`;
         }
-        
+
         productoHTML.innerHTML = `
           <div>
             <h3>${producto.nombre}</h3>
@@ -167,7 +154,7 @@ function generarBebidas() {
           </div>
           ${precioHTML}
         `;
-        
+
         container.appendChild(productoHTML);
       });
     }
@@ -181,14 +168,7 @@ generarProductos();
 // CONFIGURACIÓN DE ENLACES
 // ==========================================
 
-// Google Maps - Abrir con coordenadas exactas
 document.getElementById('mapsIcon').href = `https://maps.google.com/?q=${CONFIG.coordenadas.lat},${CONFIG.coordenadas.lng}`;
-
-// Instagram
 document.getElementById('instagramIcon').href = CONFIG.instagram;
-
-// Facebook
 document.getElementById('facebookIcon').href = CONFIG.facebook;
-
-// WhatsApp
 document.getElementById('whatsappIcon').href = `https://wa.me/${CONFIG.telefono}`;
