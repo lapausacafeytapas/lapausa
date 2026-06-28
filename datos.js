@@ -17,50 +17,29 @@ const CONFIG = {
 const PRODUCTOS = {
   cafes: [
     {
-      nombre: "Espresso",
-      descripcion: "Café intenso.",
-      precio: "1,50",
+      nombre: "Solo",
+      descripcion: "Café.",
+      precio: "1,30",
       alergenos: "",
       por_unidad: false
     },
     {
       nombre: "Cortado",
-      descripcion: "Espresso con leche.",
-      precio: "1,70",
+      descripcion: "Café con leche.",
+      precio: "1,50",
       alergenos: "L",
       por_unidad: false
     },
     {
       nombre: "Café con leche",
       descripcion: "Clásico.",
-      precio: "1,90",
+      precio: "1,70",
       alergenos: "L",
       por_unidad: false
     },
     {
       nombre: "Capuchino",
       descripcion: "Con espuma y cacao.",
-      precio: "2,40",
-      alergenos: "L",
-      por_unidad: false
-    },
-    {
-      nombre: "Latte",
-      descripcion: "Más leche.",
-      precio: "2,40",
-      alergenos: "L",
-      por_unidad: false
-    },
-    {
-      nombre: "Americano",
-      descripcion: "Suave.",
-      precio: "1,80",
-      alergenos: "",
-      por_unidad: false
-    },
-    {
-      nombre: "Bombón",
-      descripcion: "Leche condensada.",
       precio: "2,00",
       alergenos: "L",
       por_unidad: false
@@ -68,315 +47,546 @@ const PRODUCTOS = {
     {
       nombre: "Carajillo",
       descripcion: "Con licor.",
-      precio: "2,80",
-      alergenos: "L,SU",
+      precio: "1,80",
+      alergenos: "SU",
       por_unidad: false
     },
     {
-      nombre: "Moca",
-      descripcion: "Chocolate.",
-      precio: "2,90",
-      alergenos: "L",
+      nombre: "Cremaet",
+      descripcion: "Café con licor.",
+      precio: "2,20",
+      alergenos: "SU",
       por_unidad: false
     },
     {
       nombre: "Infusión",
       descripcion: "Té o manzanilla.",
-      precio: "2,00",
+      precio: "1,70",
+      alergenos: "",
+      por_unidad: false
+    },
+    {
+      nombre: "Suplemento del tiempo",
+      descripcion: "Suplemento adicional.",
+      precio: "0,20",
       alergenos: "",
       por_unidad: false
     }
   ],
-  
-  tapas: [
+
+  desayunos: [
     {
-      nombre: "Patatas Bravas",
-      descripcion: "Con salsa brava.",
-      precio: "5,50",
-      alergenos: "H,M",
-      por_unidad: false
-    },
-    {
-      nombre: "Croquetas de jamón",
-      descripcion: "Caseras.",
-      precio: "7,50",
-      alergenos: "G,L,H",
-      por_unidad: false
-    },
-    {
-      nombre: "Calamares",
-      descripcion: "Rebozados.",
-      precio: "8,50",
-      alergenos: "G,H,MO",
-      por_unidad: false
-    },
-    {
-      nombre: "Ensaladilla rusa",
-      descripcion: "Tradicional.",
-      precio: "5,90",
-      alergenos: "H,P",
-      por_unidad: false
-    },
-    {
-      nombre: "Pan con tomate",
-      descripcion: "Aceite de oliva.",
-      precio: "3,50",
+      nombre: "Tostada tradicional",
+      descripcion: "Desayuno.",
+      precio: "2,80",
       alergenos: "G",
       por_unidad: false
     },
     {
-      nombre: "Tabla ibérica",
-      descripcion: "Selección de embutidos.",
+      nombre: "Tostada especial",
+      descripcion: "Desayuno.",
+      precio: "3,80",
+      alergenos: "G",
+      por_unidad: false
+    },
+    {
+      nombre: "Desayuno dulce",
+      descripcion: "Desayuno.",
+      precio: "2,80",
+      alergenos: "G,L",
+      por_unidad: false
+    },
+    {
+      nombre: "Desayuno salado",
+      descripcion: "Desayuno.",
+      precio: "3,00",
+      alergenos: "G",
+      por_unidad: false
+    }
+  ],
+
+  almuerzos: [
+    {
+      nombre: "Bocadillo del día",
+      descripcion: "Almuerzo.",
+      precio: "6,50",
+      alergenos: "G",
+      por_unidad: false
+    },
+    {
+      nombre: "Bocadillo de carta",
+      descripcion: "Almuerzo.",
+      precio: "8,00",
+      alergenos: "G",
+      por_unidad: false
+    },
+    {
+      nombre: "Gasto",
+      descripcion: "Suplemento.",
+      precio: "",
+      alergenos: "",
+      por_unidad: false
+    }
+  ],
+
+  menudeldia: [
+    {
+      nombre: "1 Primero + 1 Segundo",
+      descripcion: "Menú del día.",
       precio: "12,50",
       alergenos: "",
       por_unidad: false
     },
     {
-      nombre: "Queso curado",
-      descripcion: "Selección nacional.",
-      precio: "8,00",
-      alergenos: "L",
-      por_unidad: false
-    },
-    {
-      nombre: "Alitas BBQ",
-      descripcion: "Asadas.",
-      precio: "7,90",
-      alergenos: "S",
-      por_unidad: false
-    },
-    {
-      nombre: "Nachos",
-      descripcion: "Con queso y salsa.",
-      precio: "8,90",
-      alergenos: "L",
-      por_unidad: false
-    },
-    {
-      nombre: "Boquerones",
-      descripcion: "En vinagre.",
-      precio: "6,90",
-      alergenos: "P",
-      por_unidad: false
-    }
-  ],
-  
-  principales: [
-    {
-      nombre: "Hamburguesa PAUsa",
-      descripcion: "Vacuno, cheddar y bacon.",
-      precio: "12,90",
-      alergenos: "G,L,H,M",
-      por_unidad: false
-    },
-    {
-      nombre: "Sándwich Club",
-      descripcion: "Pollo y bacon.",
-      precio: "9,90",
-      alergenos: "G,L,H",
-      por_unidad: false
-    },
-    {
-      nombre: "Ensalada César",
-      descripcion: "Con pollo crujiente.",
-      precio: "10,50",
-      alergenos: "G,L,H,P",
-      por_unidad: false
-    },
-    {
-      nombre: "Pasta carbonara",
-      descripcion: "Salsa cremosa.",
-      precio: "11,50",
-      alergenos: "G,L,H",
-      por_unidad: false
-    },
-    {
-      nombre: "Solomillo",
-      descripcion: "Con patatas.",
-      precio: "18,90",
+      nombre: "2 Segundos",
+      descripcion: "Menú del día.",
+      precio: "13,50",
       alergenos: "",
       por_unidad: false
     },
     {
-      nombre: "Salmón a la plancha",
-      descripcion: "Con verduras.",
-      precio: "16,90",
-      alergenos: "P",
+      nombre: "Plato único",
+      descripcion: "Menú del día.",
+      precio: "11,00",
+      alergenos: "",
       por_unidad: false
     }
   ],
-  
-  postres: [
+
+  tardes: [
     {
-      nombre: "Tarta de queso",
-      descripcion: "Casera.",
+      nombre: "Tostada tradicional",
+      descripcion: "Merienda.",
+      precio: "1,80",
+      alergenos: "G",
+      por_unidad: false
+    },
+    {
+      nombre: "Bollería dulce",
+      descripcion: "Merienda.",
+      precio: "1,50",
+      alergenos: "G,L,H",
+      por_unidad: false
+    },
+    {
+      nombre: "Bollería salada",
+      descripcion: "Merienda.",
+      precio: "1,80",
+      alergenos: "G,L,H",
+      por_unidad: false
+    },
+    {
+      nombre: "Gofre con Nutella",
+      descripcion: "Merienda.",
+      precio: "4,00",
+      alergenos: "G,L,H",
+      por_unidad: false
+    },
+    {
+      nombre: "Gofre con Nutella y helado",
+      descripcion: "Merienda.",
       precio: "5,50",
       alergenos: "G,L,H",
       por_unidad: false
     },
     {
-      nombre: "Brownie",
-      descripcion: "Con nueces.",
-      precio: "5,90",
-      alergenos: "G,L,H,FC",
-      por_unidad: false
-    },
-    {
-      nombre: "Helado",
-      descripcion: "Dos bolas.",
-      precio: "4,90",
+      nombre: "Helado cono",
+      descripcion: "Merienda.",
+      precio: "",
       alergenos: "L",
       por_unidad: false
     },
     {
-      nombre: "Crema catalana",
-      descripcion: "Tradicional.",
-      precio: "5,20",
-      alergenos: "L,H",
-      por_unidad: false
-    },
-    {
-      nombre: "Fruta de temporada",
-      descripcion: "Natural.",
-      precio: "4,50",
-      alergenos: "",
+      nombre: "Helado tarrina",
+      descripcion: "Merienda.",
+      precio: "",
+      alergenos: "L",
       por_unidad: false
     }
   ],
-  
+
+  viernesysabado: [],
+
   bebidas: {
-    tintos: [
+    refrescos: [
       {
-        nombre: "Rioja Crianza",
-        descripcion: "Vino tinto.",
-        precio_copa: "3,80",
-        precio_botella: "18,00",
-        alergenos: "SU"
+        nombre: "Agua pequeña",
+        descripcion: "Bebida.",
+        precio: "1,00",
+        alergenos: "",
+        por_unidad: false
       },
       {
-        nombre: "Ribera del Duero Roble",
-        descripcion: "Vino tinto.",
-        precio_copa: "4,20",
-        precio_botella: "21,00",
-        alergenos: "SU"
+        nombre: "Agua grande",
+        descripcion: "Bebida.",
+        precio: "1,50",
+        alergenos: "",
+        por_unidad: false
       },
       {
-        nombre: "Rioja Reserva",
-        descripcion: "Vino tinto.",
-        precio_copa: "5,50",
-        precio_botella: "28,00",
-        alergenos: "SU"
+        nombre: "Coca-Cola",
+        descripcion: "Original, Zero y Zero-Zero.",
+        precio: "2,00",
+        alergenos: "",
+        por_unidad: false
       },
       {
-        nombre: "Priorat",
-        descripcion: "Vino tinto.",
-        precio_copa: "6,00",
-        precio_botella: "32,00",
-        alergenos: "SU"
-      }
-    ],
-    blancos: [
-      {
-        nombre: "Verdejo",
-        descripcion: "Vino blanco.",
-        precio_copa: "3,80",
-        precio_botella: "18,00",
-        alergenos: "SU"
+        nombre: "Fanta",
+        descripcion: "Naranja o limón.",
+        precio: "2,00",
+        alergenos: "",
+        por_unidad: false
       },
       {
-        nombre: "Albariño",
-        descripcion: "Vino blanco.",
-        precio_copa: "4,50",
-        precio_botella: "24,00",
-        alergenos: "SU"
+        nombre: "Aquarius",
+        descripcion: "Bebida refrescante.",
+        precio: "2,00",
+        alergenos: "",
+        por_unidad: false
       },
       {
-        nombre: "Sauvignon Blanc",
-        descripcion: "Vino blanco.",
-        precio_copa: "4,20",
-        precio_botella: "22,00",
-        alergenos: "SU"
+        nombre: "Fuze Tea",
+        descripcion: "Té refrescante.",
+        precio: "2,00",
+        alergenos: "",
+        por_unidad: false
       },
       {
-        nombre: "Chardonnay",
-        descripcion: "Vino blanco.",
-        precio_copa: "4,80",
-        precio_botella: "25,00",
-        alergenos: "SU"
+        nombre: "Tónica",
+        descripcion: "Refresco.",
+        precio: "2,00",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "Sprite",
+        descripcion: "Refresco.",
+        precio: "2,00",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "Bitter",
+        descripcion: "Refresco.",
+        precio: "2,00",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "Sweps",
+        descripcion: "Refresco.",
+        precio: "2,00",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "Zumo Pago",
+        descripcion: "Zumo.",
+        precio: "2,00",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "Zumo de naranja natural",
+        descripcion: "Zumo natural.",
+        precio: "3,50",
+        alergenos: "",
+        por_unidad: false
       }
     ],
     cervezas: [
       {
-        nombre: "Mahou 5 Estrellas",
+        nombre: "Doble Águila Dorada",
         descripcion: "Cerveza.",
-        precio: "2,80",
+        precio: "",
         alergenos: "G",
         por_unidad: false
       },
       {
-        nombre: "Alhambra Reserva 1925",
+        nombre: "1/5 Amstel",
         descripcion: "Cerveza.",
-        precio: "3,40",
+        precio: "",
         alergenos: "G",
         por_unidad: false
       },
       {
-        nombre: "IPA Artesana",
+        nombre: "1/3 Amstel",
         descripcion: "Cerveza.",
-        precio: "4,20",
+        precio: "",
         alergenos: "G",
         por_unidad: false
       },
       {
-        nombre: "Mahou Sin Alcohol",
+        nombre: "1/3 Radler",
         descripcion: "Cerveza.",
-        precio: "2,70",
+        precio: "",
+        alergenos: "G",
+        por_unidad: false
+      },
+      {
+        nombre: "Cerveza sin gluten",
+        descripcion: "Cerveza.",
+        precio: "",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "1/3 Amstel Oro",
+        descripcion: "Cerveza.",
+        precio: "",
+        alergenos: "G",
+        por_unidad: false
+      },
+      {
+        nombre: "1/3 Amstel Oro sin alcohol",
+        descripcion: "Cerveza.",
+        precio: "",
+        alergenos: "G",
+        por_unidad: false
+      },
+      {
+        nombre: "1/3 Águila sin filtrar",
+        descripcion: "Cerveza.",
+        precio: "",
+        alergenos: "G",
+        por_unidad: false
+      },
+      {
+        nombre: "1/3 Heineken",
+        descripcion: "Cerveza.",
+        precio: "",
+        alergenos: "G",
+        por_unidad: false
+      },
+      {
+        nombre: "1/3 Heineken sin alcohol",
+        descripcion: "Cerveza.",
+        precio: "",
+        alergenos: "G",
+        por_unidad: false
+      },
+      {
+        nombre: "Desperados",
+        descripcion: "Cerveza.",
+        precio: "",
+        alergenos: "G",
+        por_unidad: false
+      },
+      {
+        nombre: "Ladrón de manzanas",
+        descripcion: "Sidra.",
+        precio: "",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "Lagunitas IPA",
+        descripcion: "Cerveza.",
+        precio: "",
+        alergenos: "G",
+        por_unidad: false
+      },
+      {
+        nombre: "1/5 Estrella Galicia",
+        descripcion: "Cerveza.",
+        precio: "",
+        alergenos: "G",
+        por_unidad: false
+      },
+      {
+        nombre: "1/3 Estrella Galicia",
+        descripcion: "Cerveza.",
+        precio: "",
+        alergenos: "G",
+        por_unidad: false
+      },
+      {
+        nombre: "1/3 Estrella Galicia sin alcohol",
+        descripcion: "Cerveza.",
+        precio: "",
         alergenos: "G",
         por_unidad: false
       }
     ],
-    refrescos: [
+    blancos: [
       {
-        nombre: "Coca-Cola",
-        descripcion: "Original, Zero y Zero-Zero.",
-        precio: "2,60",
+        nombre: "Copa Verdejo",
+        descripcion: "Vino blanco.",
+        precio: "",
+        alergenos: "SU",
+        por_unidad: false
+      },
+      {
+        nombre: "Botella Verdejo",
+        descripcion: "Vino blanco.",
+        precio: "",
+        alergenos: "SU",
+        por_unidad: false
+      },
+      {
+        nombre: "Botella Godello",
+        descripcion: "Vino blanco.",
+        precio: "",
+        alergenos: "SU",
+        por_unidad: false
+      }
+    ],
+    tintos: [
+      {
+        nombre: "Copa Rioja",
+        descripcion: "Vino tinto.",
+        precio: "",
+        alergenos: "SU",
+        por_unidad: false
+      },
+      {
+        nombre: "Botella Rioja",
+        descripcion: "Vino tinto.",
+        precio: "",
+        alergenos: "SU",
+        por_unidad: false
+      },
+      {
+        nombre: "Botella Ribera del Duero",
+        descripcion: "Vino tinto.",
+        precio: "",
+        alergenos: "SU",
+        por_unidad: false
+      },
+      {
+        nombre: "Sangría",
+        descripcion: "Vino tinto.",
+        precio: "",
+        alergenos: "SU",
+        por_unidad: false
+      },
+      {
+        nombre: "Tinto de verano",
+        descripcion: "Vino tinto.",
+        precio: "",
+        alergenos: "SU",
+        por_unidad: false
+      }
+    ],
+    copas: [
+      {
+        nombre: "Vermut",
+        descripcion: "Copa.",
+        precio: "",
+        alergenos: "SU",
+        por_unidad: false
+      },
+      {
+        nombre: "Coñac",
+        descripcion: "Copa.",
+        precio: "",
         alergenos: "",
         por_unidad: false
       },
       {
-        nombre: "Coca-Cola Zero",
-        descripcion: "Refresco.",
-        precio: "2,60",
+        nombre: "Copa Orujo de hierbas",
+        descripcion: "Copa.",
+        precio: "",
         alergenos: "",
         por_unidad: false
       },
       {
-        nombre: "Fanta Naranja",
-        descripcion: "Refresco.",
-        precio: "2,60",
+        nombre: "Copa crema de orujo",
+        descripcion: "Copa.",
+        precio: "",
+        alergenos: "L",
+        por_unidad: false
+      },
+      {
+        nombre: "Copa Orujo blanco",
+        descripcion: "Copa.",
+        precio: "",
         alergenos: "",
         por_unidad: false
       },
       {
-        nombre: "Aquarius Limón",
-        descripcion: "Refresco.",
-        precio: "2,60",
+        nombre: "Copa limoncello",
+        descripcion: "Copa.",
+        precio: "",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "Copa licor de arroz",
+        descripcion: "Copa.",
+        precio: "",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "Copa Baileys",
+        descripcion: "Copa.",
+        precio: "",
+        alergenos: "L",
+        por_unidad: false
+      },
+      {
+        nombre: "Copa Whisky",
+        descripcion: "Copa.",
+        precio: "",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "Copa Ron",
+        descripcion: "Copa.",
+        precio: "",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "Copa Vodka",
+        descripcion: "Copa.",
+        precio: "",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "Copa Ginebra",
+        descripcion: "Copa.",
+        precio: "",
         alergenos: "",
         por_unidad: false
       }
     ],
-    aguas: [
+    combinados: [
       {
-        nombre: "Agua mineral 50 cl",
-        descripcion: "Botella.",
-        precio: "1,80",
+        nombre: "Whisky",
+        descripcion: "Combinado.",
+        precio: "",
         alergenos: "",
         por_unidad: false
       },
       {
-        nombre: "Agua con gas",
-        descripcion: "Botella.",
-        precio: "2,20",
+        nombre: "Ron",
+        descripcion: "Combinado.",
+        precio: "",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "Vodka",
+        descripcion: "Combinado.",
+        precio: "",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "Ginebra",
+        descripcion: "Combinado.",
+        precio: "",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "Ginebra premium",
+        descripcion: "Combinado.",
+        precio: "",
         alergenos: "",
         por_unidad: false
       }
