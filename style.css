@@ -59,3 +59,4 @@ border-radius:8px;
 .producto-precios{display:flex;gap:15px;min-width:auto;text-align:right}
 .producto-precios div{display:flex;flex-direction:column}
 .producto-precios small{font-size:0.75rem;color:#aaa}
+.leyenda-subcategoria{margin:0 0 14px;padding:0 4px;color:#bdbdbd;font-size:.9rem;font-style:italic;font-weight:400;letter-spacing:.2px}
