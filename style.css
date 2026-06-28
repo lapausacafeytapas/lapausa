@@ -96,10 +96,11 @@ border-radius:8px;
   #inicio.active{
     position:fixed;
     inset:0;
-    height:100vh;
-    min-height:100vh;
+    height:96vh;
+    min-height:96vh;
     overflow:hidden;
     padding-bottom:0;
+    top:2vh;
   }
 
   #inicio .hero,
