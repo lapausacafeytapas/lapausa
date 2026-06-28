@@ -3,10 +3,29 @@
 // ==========================================
 const inicio = document.getElementById('inicio');
 const carta = document.getElementById('carta');
+const tituloCarta = document.getElementById('titulo-carta');
+const categoriasMenu = document.getElementById('categorias-menu');
+
+let vistaCarta = 'categorias';
+let categoriaActual = null;
+
+const titulosCategoria = {
+  mananas: 'La PAUsa de las mañanas',
+  tardes: 'La PAUsa de las tardes',
+  viernesysabado: 'La PAUsa de las noches',
+  cafes: 'Cafés',
+  bebidas: 'Bebidas'
+};
+
+const subcategoriasPorCategoria = {
+  mananas: ['desayunos', 'almuerzos', 'menudeldia'],
+  bebidas: ['refrescos', 'cervezas', 'blancos', 'tintos', 'copas', 'combinados']
+};
 
 function mostrarCarta() {
   inicio.classList.remove('active');
   carta.classList.add('active');
+  volverACategorias();
   window.scrollTo(0, 0);
 }
 
@@ -16,11 +35,114 @@ function mostrarInicio() {
   window.scrollTo(0, 0);
 }
 
+function volverCarta() {
+  if (vistaCarta === 'productos') {
+    mostrarSubcategorias(categoriaActual);
+    return;
+  }
+
+  if (vistaCarta === 'subcategorias') {
+    volverACategorias();
+    return;
+  }
+
+  mostrarInicio();
+}
+
+function volverACategorias() {
+  vistaCarta = 'categorias';
+  categoriaActual = null;
+  tituloCarta.textContent = 'Nuestra Carta';
+  categoriasMenu.classList.remove('oculto');
+
+  document.querySelectorAll('.categorias-container').forEach(container => {
+    container.classList.add('oculto');
+  });
+
+  document.querySelectorAll('.subcategorias').forEach(menu => {
+    menu.classList.add('oculto');
+  });
+
+  document.querySelectorAll('.subcategorias-container').forEach(container => {
+    container.classList.add('oculto');
+  });
+
+  document.querySelectorAll('.categorias button').forEach(b => {
+    b.classList.remove('active-cat');
+  });
+}
+
 // ==========================================
 // CAMBIO DE CATEGORÍAS
 // ==========================================
 function cat(id, btn) {
+  document.querySelectorAll('.categorias button').forEach(b => {
+    b.classList.remove('active-cat');
+  });
+  if (btn) btn.classList.add('active-cat');
+
+  categoriaActual = id;
+
+  if (subcategoriasPorCategoria[id]) {
+    mostrarSubcategorias(id);
+    return;
+  }
+
+  mostrarProductosDirectos(id);
+}
+
+function mostrarSubcategorias(id) {
+  vistaCarta = 'subcategorias';
+  categoriaActual = id;
+  tituloCarta.textContent = titulosCategoria[id] || 'Nuestra Carta';
+  categoriasMenu.classList.add('oculto');
+
   document.querySelectorAll('.categorias-container').forEach(container => {
+    container.classList.add('oculto');
+  });
+
+  document.querySelectorAll('.subcategorias').forEach(menu => {
+    menu.classList.add('oculto');
+  });
+
+  document.querySelectorAll('.subcategorias-container').forEach(container => {
+    container.classList.add('oculto');
+  });
+
+  const container = document.getElementById(id + '-container');
+  if (container) {
+    container.classList.remove('oculto');
+    const menu = container.querySelector('.subcategorias');
+    if (menu) menu.classList.remove('oculto');
+  }
+
+  const primeraSubcategoria = subcategoriasPorCategoria[id]?.[0];
+  if (primeraSubcategoria) {
+    const primerBoton = container?.querySelector('.subcategorias button');
+    document.querySelectorAll('.subcategorias button').forEach(b => {
+      b.classList.remove('active-subcat');
+    });
+    if (primerBoton) primerBoton.classList.add('active-subcat');
+  }
+
+  window.scrollTo(0, 0);
+}
+
+function mostrarProductosDirectos(id) {
+  vistaCarta = 'productos';
+  categoriaActual = id;
+  tituloCarta.textContent = titulosCategoria[id] || 'Nuestra Carta';
+  categoriasMenu.classList.add('oculto');
+
+  document.querySelectorAll('.categorias-container').forEach(container => {
+    container.classList.add('oculto');
+  });
+
+  document.querySelectorAll('.subcategorias').forEach(menu => {
+    menu.classList.add('oculto');
+  });
+
+  document.querySelectorAll('.subcategorias-container').forEach(container => {
     container.classList.add('oculto');
   });
 
@@ -29,29 +151,39 @@ function cat(id, btn) {
     container.classList.remove('oculto');
   }
 
-  document.querySelectorAll('.categorias button').forEach(b => {
-    b.classList.remove('active-cat');
-  });
-  if (btn) btn.classList.add('active-cat');
+  window.scrollTo(0, 0);
 }
 
 // ==========================================
 // CAMBIO DE SUBCATEGORÍAS
 // ==========================================
 function subcat(id, btn) {
-  document.querySelectorAll('.subcategorias-container').forEach(container => {
-    container.classList.add('oculto');
-  });
-
-  const container = document.getElementById(id + '-subcont');
-  if (container) {
-    container.classList.remove('oculto');
-  }
+  vistaCarta = 'productos';
 
   document.querySelectorAll('.subcategorias button').forEach(b => {
     b.classList.remove('active-subcat');
   });
   if (btn) btn.classList.add('active-subcat');
+
+  document.querySelectorAll('.categorias-container').forEach(container => {
+    container.classList.add('oculto');
+  });
+
+  document.querySelectorAll('.subcategorias').forEach(menu => {
+    menu.classList.add('oculto');
+  });
+
+  document.querySelectorAll('.subcategorias-container').forEach(container => {
+    container.classList.add('oculto');
+  });
+
+  const contenedorSubcategoria = document.getElementById(id + '-subcont');
+  if (contenedorSubcategoria) {
+    contenedorSubcategoria.classList.remove('oculto');
+  }
+
+  tituloCarta.textContent = btn ? btn.textContent : 'Nuestra Carta';
+  window.scrollTo(0, 0);
 }
 
 // ==========================================
@@ -184,6 +316,7 @@ function generarBebidas() {
 
 // Generar productos cuando carga la página
 generarProductos();
+volverACategorias();
 
 // ==========================================
 // CONFIGURACIÓN DE ENLACES
