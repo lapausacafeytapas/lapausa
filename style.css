@@ -69,6 +69,28 @@ border-radius:8px;
     background:#000;
   }
 
+  .content.hero-content{
+    justify-content:flex-start;
+    padding-top:90px;
+    padding-bottom:110px;
+  }
+
+  .logo{
+    width:min(220px,58vw);
+    margin-bottom:22px;
+  }
+
+  h1{
+    font-size:clamp(1.8rem,8vw,3rem);
+    margin-bottom:14px;
+  }
+
+  p{
+    font-size:1.05rem;
+    line-height:1.5;
+    margin-bottom:24px;
+  }
+
   .categorias,
   .subcategorias{
     display:flex;
