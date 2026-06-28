@@ -67,6 +67,18 @@ function generarProductos() {
     if (container && productos) {
       container.innerHTML = '';
 
+      if (categoria === 'almuerzos') {
+        const leyenda = document.createElement('div');
+        leyenda.className = 'producto';
+        leyenda.innerHTML = `
+          <div>
+            <h3>Incluye bocadillo, bebida y cafe</h3>
+          </div>
+          <strong></strong>
+        `;
+        container.appendChild(leyenda);
+      }
+
       productos.forEach(producto => {
         const productoHTML = document.createElement('div');
         productoHTML.className = 'producto';
