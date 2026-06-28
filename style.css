@@ -11,7 +11,7 @@ h1{font-size:clamp(2rem,5vw,3.5rem);margin-bottom:18px}
 p{max-width:520px;color:#ddd;line-height:1.6;margin-bottom:30px}
 button{background:var(--verde);border:none;color:#fff;padding:15px 34px;border-radius:40px;font-weight:bold;cursor:pointer}
 .link,.social{color:#fff;text-decoration:none;margin-top:18px}
-header{display:flex;gap:20px;align-items:center;padding:18px;background:#111;position:sticky;top:0}
+header{display:flex;gap:20px;align-items:center;padding:18px;background:#111}
 header button{background:#222}
 .categorias{display:flex;gap:6px;overflow:auto;padding:15px}
 .categorias button{background:#222;border:1px solid var(--verde)}
