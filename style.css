@@ -69,13 +69,19 @@ border-radius:8px;
 .leyenda-subcategoria{margin:0 0 14px;padding:0 4px;color:#bdbdbd;font-size:.9rem;font-style:italic;font-weight:400;letter-spacing:.2px}
 
 @media (max-width: 768px){
+  .hero,
   .hero img{
-    object-fit:contain;
-    object-position:center top;
+    height:calc(100svh - 70px);
+  }
+
+  .hero img{
+    object-fit:cover;
+    object-position:center center;
   }
 
   .hero{
     background:#000;
+    overflow:hidden;
   }
 
   #inicio{
@@ -83,26 +89,30 @@ border-radius:8px;
   }
 
   #inicio .content{
-    min-height:100svh;
+    min-height:calc(100svh - 70px);
     justify-content:center;
-    padding-top:24px;
-    padding-bottom:100px;
+    padding-top:20px;
+    padding-bottom:20px;
   }
 
   .logo{
-    width:min(200px,52vw);
-    margin-bottom:18px;
+    width:min(190px,50vw);
+    margin-bottom:16px;
   }
 
   h1{
-    font-size:clamp(1.7rem,7vw,2.6rem);
-    margin-bottom:12px;
+    font-size:clamp(1.6rem,6.5vw,2.4rem);
+    margin-bottom:10px;
   }
 
   p{
-    font-size:1rem;
-    line-height:1.45;
-    margin-bottom:20px;
+    font-size:.98rem;
+    line-height:1.4;
+    margin-bottom:18px;
+  }
+
+  button{
+    padding:13px 28px;
   }
 
   .categorias,
