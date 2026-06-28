@@ -136,7 +136,7 @@ function abrirSubcategoria(categoriaId, subcategoriaId, titulo) {
     return;
   }
 
-  renderProductos(titulo, PRODUCTOS[subcategoriaId] || [], subcategoriaId);
+  renderProductos(titulo, PRODUCTOS[subcategoriaId] || []);
 }
 
 function renderProductos(titulo, productos, claveLeyenda = null) {
@@ -159,6 +159,7 @@ function renderProductos(titulo, productos, claveLeyenda = null) {
 
   if (!productos.length) {
     const vacio = document.createElement('p');
+    vacio.style.padding = '15px';
     vacio.textContent = 'Próximamente.';
     productosView.appendChild(vacio);
     return;
@@ -220,8 +221,6 @@ function crearProducto(producto) {
 
   return productoHTML;
 }
-
-renderCategorias();
 
 // ==========================================
 // CONFIGURACIÓN DE ENLACES
