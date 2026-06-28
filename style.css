@@ -81,7 +81,8 @@ border-radius:8px;
 @media (max-width: 768px){
   html,body{
     height:100%;
-    overflow:hidden;
+    overflow-x:hidden;
+    overflow-y:auto;
   }
 
   body:has(#inicio.active){
@@ -90,6 +91,13 @@ border-radius:8px;
     width:100%;
     overflow:hidden;
     touch-action:none;
+  }
+
+  body:not(:has(#inicio.active)){
+    position:static;
+    overflow-x:hidden;
+    overflow-y:auto;
+    touch-action:auto;
   }
 
   #inicio,
@@ -174,5 +182,14 @@ border-radius:8px;
     flex-direction:column;
     align-items:flex-start;
     gap:12px;
+  }
+
+  #carta,
+  #carta.active{
+    position:relative;
+    min-height:100vh;
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
+    padding-bottom:90px;
   }
 }
