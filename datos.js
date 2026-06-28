@@ -17,57 +17,57 @@ const CONFIG = {
 const PRODUCTOS = {
   cafes: [
     {
-      nombre: "Solo",
-      descripcion: "Café.",
+      nombre: "Espresso",
+      descripcion: "",
       precio: "1,30",
       alergenos: "",
       por_unidad: false
     },
     {
       nombre: "Cortado",
-      descripcion: "Café con leche.",
+      descripcion: "",
       precio: "1,50",
       alergenos: "L",
       por_unidad: false
     },
     {
       nombre: "Café con leche",
-      descripcion: "Clásico.",
+      descripcion: "",
       precio: "1,70",
       alergenos: "L",
       por_unidad: false
     },
     {
-      nombre: "Capuchino",
-      descripcion: "Con espuma y cacao.",
+      nombre: "Capuccino",
+      descripcion: "",
       precio: "2,00",
       alergenos: "L",
       por_unidad: false
     },
     {
       nombre: "Carajillo",
-      descripcion: "Con licor.",
+      descripcion: "",
       precio: "1,80",
       alergenos: "SU",
       por_unidad: false
     },
     {
       nombre: "Cremaet",
-      descripcion: "Café con licor.",
+      descripcion: "",
       precio: "2,20",
       alergenos: "SU",
       por_unidad: false
     },
     {
       nombre: "Infusión",
-      descripcion: "Té o manzanilla.",
+      descripcion: "",
       precio: "1,70",
       alergenos: "",
       por_unidad: false
     },
     {
       nombre: "Suplemento del tiempo",
-      descripcion: "Suplemento adicional.",
+      descripcion: "",
       precio: "0,20",
       alergenos: "",
       por_unidad: false
