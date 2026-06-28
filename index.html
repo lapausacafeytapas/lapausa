@@ -48,19 +48,19 @@
 <section id="carta" class="screen">
 
 <header class="premium-header">
-<button onclick="mostrarInicio()">← Inicio</button>
-<h2>Nuestra Carta</h2>
+<button onclick="volverCarta()">← Volver</button>
+<h2 id="titulo-carta">Nuestra Carta</h2>
 </header>
 
-<nav class="categorias">
-<button class="active-cat" onclick="cat('mananas',this)">La PAUsa de las mañanas</button>
+<nav id="categorias-menu" class="categorias">
+<button onclick="cat('mananas',this)">La PAUsa de las mañanas</button>
 <button onclick="cat('tardes',this)">La PAUsa de las tardes</button>
 <button onclick="cat('viernesysabado',this)">La PAUsa de las noches</button>
 <button onclick="cat('cafes',this)">Cafes</button>
 <button onclick="cat('bebidas',this)">Bebidas</button>
 </nav>
 
-<div id="mananas-container" class="categorias-container">
+<div id="mananas-container" class="categorias-container oculto">
   <nav class="subcategorias">
     <button class="active-subcat" onclick="subcat('desayunos',this)">Desayunos</button>
     <button onclick="subcat('almuerzos',this)">Almuerzos</button>
