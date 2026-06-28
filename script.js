@@ -112,7 +112,7 @@ function abrirCategoria(id) {
     return;
   }
 
-  renderProductos(categoria.titulo, PRODUCTOS[categoria.productos] || []);
+  renderProductos(categoria.titulo, PRODUCTOS[categoria.productos] || [], categoria.productos);
 }
 
 function renderSubcategorias(id) {
@@ -152,6 +152,10 @@ function renderProductos(titulo, productos, claveLeyenda = null) {
 
   if (claveLeyenda === 'almuerzos') {
     productosView.appendChild(crearLeyenda('Incluye bocadillo, bebida y café'));
+  }
+
+  if (claveLeyenda === 'cafes') {
+    productosView.appendChild(crearLeyenda('Puedes pedir tu café con leche sin lactosa y leche de soja'));
   }
 
   if (claveLeyenda === 'menudeldia') {
