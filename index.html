@@ -44,7 +44,16 @@
 <button onclick="cat('bebidas',this)">Bebidas</button>
 </nav>
 
-<div id="mananas-container" class="categorias-container"></div>
+<div id="mananas-container" class="categorias-container">
+  <nav class="subcategorias">
+    <button class="active-subcat" onclick="subcat('desayunos',this)">Desayunos</button>
+    <button onclick="subcat('almuerzos',this)">Almuerzos</button>
+    <button onclick="subcat('menudeldia',this)">Menú del día</button>
+  </nav>
+  <div id="desayunos-subcont" class="subcategorias-container"></div>
+  <div id="almuerzos-subcont" class="subcategorias-container oculto"></div>
+  <div id="menudeldia-subcont" class="subcategorias-container oculto"></div>
+</div>
 <div id="tardes-container" class="categorias-container oculto"></div>
 <div id="viernesysabado-container" class="categorias-container oculto"></div>
 <div id="cafes-container" class="categorias-container oculto"></div>
