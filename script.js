@@ -69,13 +69,8 @@ function generarProductos() {
 
       if (categoria === 'almuerzos') {
         const leyenda = document.createElement('div');
-        leyenda.className = 'producto';
-        leyenda.innerHTML = `
-          <div>
-            <h3>Incluye bocadillo, bebida y café</h3>
-          </div>
-          <strong></strong>
-        `;
+        leyenda.className = 'leyenda-subcategoria';
+        leyenda.textContent = 'Incluye bocadillo, bebida y café';
         container.appendChild(leyenda);
       }
 
