@@ -707,35 +707,35 @@ const PRODUCTOS = {
     combinados: [
       {
         nombre: "Whisky",
-        descripcion: "Combinado.",
+        descripcion: "Con refresco.",
         precio: "",
         alergenos: "",
         por_unidad: false
       },
       {
         nombre: "Ron",
-        descripcion: "Combinado.",
+        descripcion: "Con refresco.",
         precio: "",
         alergenos: "",
         por_unidad: false
       },
       {
         nombre: "Vodka",
-        descripcion: "Combinado.",
+        descripcion: "Con refresco.",
         precio: "",
         alergenos: "",
         por_unidad: false
       },
       {
         nombre: "Ginebra",
-        descripcion: "Combinado.",
+        descripcion: "Con refresco.",
         precio: "",
         alergenos: "",
         por_unidad: false
       },
       {
         nombre: "Ginebra premium",
-        descripcion: "Combinado.",
+        descripcion: "Con refresco.",
         precio: "",
         alergenos: "",
         por_unidad: false
