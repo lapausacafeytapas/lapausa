@@ -60,6 +60,15 @@ border-radius:8px;
 .leyenda-subcategoria{margin:0 0 14px;padding:0 4px;color:#bdbdbd;font-size:.9rem;font-style:italic;font-weight:400;letter-spacing:.2px}
 
 @media (max-width: 768px){
+  .hero img{
+    object-fit:contain;
+    object-position:center top;
+  }
+
+  .hero{
+    background:#000;
+  }
+
   .categorias,
   .subcategorias{
     display:flex;
