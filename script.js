@@ -8,6 +8,7 @@ const categoriasMenu = document.getElementById('categorias-menu');
 
 let vistaCarta = 'categorias';
 let categoriaActual = null;
+let subcategoriaActual = null;
 
 const titulosCategoria = {
   mananas: 'La PAUsa de las mañanas',
@@ -21,6 +22,27 @@ const subcategoriasPorCategoria = {
   mananas: ['desayunos', 'almuerzos', 'menudeldia'],
   bebidas: ['refrescos', 'cervezas', 'blancos', 'tintos', 'copas', 'combinados']
 };
+
+const menuSubcategoriasPorCategoria = {
+  mananas: 'mananas-subcategorias',
+  bebidas: 'bebidas-subcategorias'
+};
+
+function ocultarTodoCarta() {
+  categoriasMenu.classList.add('oculto');
+
+  document.querySelectorAll('.categorias-container').forEach(container => {
+    container.classList.add('oculto');
+  });
+
+  document.querySelectorAll('.subcategorias').forEach(menu => {
+    menu.classList.add('oculto');
+  });
+
+  document.querySelectorAll('.subcategorias-container').forEach(container => {
+    container.classList.add('oculto');
+  });
+}
 
 function mostrarCarta() {
   inicio.classList.remove('active');
@@ -37,7 +59,11 @@ function mostrarInicio() {
 
 function volverCarta() {
   if (vistaCarta === 'productos') {
-    mostrarSubcategorias(categoriaActual);
+    if (subcategoriasPorCategoria[categoriaActual]) {
+      mostrarSubcategorias(categoriaActual);
+    } else {
+      volverACategorias();
+    }
     return;
   }
 
@@ -52,23 +78,17 @@ function volverCarta() {
 function volverACategorias() {
   vistaCarta = 'categorias';
   categoriaActual = null;
+  subcategoriaActual = null;
   tituloCarta.textContent = 'Nuestra Carta';
+  ocultarTodoCarta();
   categoriasMenu.classList.remove('oculto');
-
-  document.querySelectorAll('.categorias-container').forEach(container => {
-    container.classList.add('oculto');
-  });
-
-  document.querySelectorAll('.subcategorias').forEach(menu => {
-    menu.classList.add('oculto');
-  });
-
-  document.querySelectorAll('.subcategorias-container').forEach(container => {
-    container.classList.add('oculto');
-  });
 
   document.querySelectorAll('.categorias button').forEach(b => {
     b.classList.remove('active-cat');
+  });
+
+  document.querySelectorAll('.subcategorias button').forEach(b => {
+    b.classList.remove('active-subcat');
   });
 }
 
@@ -82,6 +102,7 @@ function cat(id, btn) {
   if (btn) btn.classList.add('active-cat');
 
   categoriaActual = id;
+  subcategoriaActual = null;
 
   if (subcategoriasPorCategoria[id]) {
     mostrarSubcategorias(id);
@@ -94,36 +115,19 @@ function cat(id, btn) {
 function mostrarSubcategorias(id) {
   vistaCarta = 'subcategorias';
   categoriaActual = id;
+  subcategoriaActual = null;
   tituloCarta.textContent = titulosCategoria[id] || 'Nuestra Carta';
-  categoriasMenu.classList.add('oculto');
+  ocultarTodoCarta();
 
-  document.querySelectorAll('.categorias-container').forEach(container => {
-    container.classList.add('oculto');
-  });
-
-  document.querySelectorAll('.subcategorias').forEach(menu => {
-    menu.classList.add('oculto');
-  });
-
-  document.querySelectorAll('.subcategorias-container').forEach(container => {
-    container.classList.add('oculto');
-  });
-
-  const container = document.getElementById(id + '-container');
-  if (container) {
-    container.classList.remove('oculto');
-    const menu = container.querySelector('.subcategorias');
-    if (menu) menu.classList.remove('oculto');
+  const menuId = menuSubcategoriasPorCategoria[id];
+  const menu = document.getElementById(menuId);
+  if (menu) {
+    menu.classList.remove('oculto');
   }
 
-  const primeraSubcategoria = subcategoriasPorCategoria[id]?.[0];
-  if (primeraSubcategoria) {
-    const primerBoton = container?.querySelector('.subcategorias button');
-    document.querySelectorAll('.subcategorias button').forEach(b => {
-      b.classList.remove('active-subcat');
-    });
-    if (primerBoton) primerBoton.classList.add('active-subcat');
-  }
+  document.querySelectorAll('.subcategorias button').forEach(b => {
+    b.classList.remove('active-subcat');
+  });
 
   window.scrollTo(0, 0);
 }
@@ -131,20 +135,9 @@ function mostrarSubcategorias(id) {
 function mostrarProductosDirectos(id) {
   vistaCarta = 'productos';
   categoriaActual = id;
+  subcategoriaActual = null;
   tituloCarta.textContent = titulosCategoria[id] || 'Nuestra Carta';
-  categoriasMenu.classList.add('oculto');
-
-  document.querySelectorAll('.categorias-container').forEach(container => {
-    container.classList.add('oculto');
-  });
-
-  document.querySelectorAll('.subcategorias').forEach(menu => {
-    menu.classList.add('oculto');
-  });
-
-  document.querySelectorAll('.subcategorias-container').forEach(container => {
-    container.classList.add('oculto');
-  });
+  ocultarTodoCarta();
 
   const container = document.getElementById(id + '-container');
   if (container) {
@@ -159,30 +152,20 @@ function mostrarProductosDirectos(id) {
 // ==========================================
 function subcat(id, btn) {
   vistaCarta = 'productos';
+  subcategoriaActual = id;
+  tituloCarta.textContent = btn ? btn.textContent : 'Nuestra Carta';
+  ocultarTodoCarta();
+
+  const container = document.getElementById(id + '-subcont');
+  if (container) {
+    container.classList.remove('oculto');
+  }
 
   document.querySelectorAll('.subcategorias button').forEach(b => {
     b.classList.remove('active-subcat');
   });
   if (btn) btn.classList.add('active-subcat');
 
-  document.querySelectorAll('.categorias-container').forEach(container => {
-    container.classList.add('oculto');
-  });
-
-  document.querySelectorAll('.subcategorias').forEach(menu => {
-    menu.classList.add('oculto');
-  });
-
-  document.querySelectorAll('.subcategorias-container').forEach(container => {
-    container.classList.add('oculto');
-  });
-
-  const contenedorSubcategoria = document.getElementById(id + '-subcont');
-  if (contenedorSubcategoria) {
-    contenedorSubcategoria.classList.remove('oculto');
-  }
-
-  tituloCarta.textContent = btn ? btn.textContent : 'Nuestra Carta';
   window.scrollTo(0, 0);
 }
 
