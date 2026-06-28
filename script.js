@@ -72,7 +72,7 @@ function generarProductos() {
         leyenda.className = 'producto';
         leyenda.innerHTML = `
           <div>
-            <h3>Incluye bocadillo, bebida y cafe</h3>
+            <h3>Incluye bocadillo, bebida y café</h3>
           </div>
           <strong></strong>
         `;
