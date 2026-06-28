@@ -10,86 +10,35 @@
 <body>
 
 <section id="inicio" class="screen active">
-
 <picture class="hero">
   <source media="(max-width:768px)" srcset="img/hero-mobile.webp">
   <img src="img/hero.webp" alt="">
 </picture>
-
 <div class="overlay"></div>
-
 <div class="content hero-content">
   <img src="img/logo.png" class="logo" alt="La PAUsa">
-
   <h1>La PAUsa que tu día necesita.</h1>
-
   <p>Un rincón donde el café, el sabor y la buena compañía se encuentran.</p>
-
   <button onclick="mostrarCarta()">VER CARTA</button>
 </div>
-
 <nav class="bottom-bar">
-  <a id="mapsIcon" href="#" target="_blank" rel="noopener noreferrer" aria-label="Ubicación en Google Maps">
-    <i class="fa-solid fa-location-dot"></i>
-  </a>
-  <a id="instagramIcon" href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram de La PAUsa">
-    <i class="fa-brands fa-instagram"></i>
-  </a>
-  <a id="facebookIcon" href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook de La PAUsa">
-    <i class="fa-brands fa-facebook-f"></i>
-  </a>
-  <a id="whatsappIcon" href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp de La PAUsa">
-    <i class="fa-brands fa-whatsapp"></i>
-  </a>
+  <a id="mapsIcon" href="#" target="_blank" rel="noopener noreferrer" aria-label="Ubicación en Google Maps"><i class="fa-solid fa-location-dot"></i></a>
+  <a id="instagramIcon" href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram de La PAUsa"><i class="fa-brands fa-instagram"></i></a>
+  <a id="facebookIcon" href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook de La PAUsa"><i class="fa-brands fa-facebook-f"></i></a>
+  <a id="whatsappIcon" href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp de La PAUsa"><i class="fa-brands fa-whatsapp"></i></a>
 </nav>
-
 </section>
 
 <section id="carta" class="screen">
+  <header class="premium-header">
+    <button onclick="volverCarta()">← Volver</button>
+    <h2 id="titulo-carta">Nuestra Carta</h2>
+  </header>
 
-<header class="premium-header">
-<button onclick="volverCarta()">← Volver</button>
-<h2 id="titulo-carta">Nuestra Carta</h2>
-</header>
-
-<nav id="categorias-menu" class="categorias">
-<button onclick="cat('mananas',this)">La PAUsa de las mañanas</button>
-<button onclick="cat('tardes',this)">La PAUsa de las tardes</button>
-<button onclick="cat('viernesysabado',this)">La PAUsa de las noches</button>
-<button onclick="cat('cafes',this)">Cafes</button>
-<button onclick="cat('bebidas',this)">Bebidas</button>
-</nav>
-
-<div id="mananas-container" class="categorias-container oculto"></div>
-<div id="tardes-container" class="categorias-container oculto"></div>
-<div id="viernesysabado-container" class="categorias-container oculto"></div>
-<div id="cafes-container" class="categorias-container oculto"></div>
-<div id="bebidas-container" class="categorias-container oculto"></div>
-
-<nav id="mananas-subcategorias" class="subcategorias oculto">
-  <button onclick="subcat('desayunos',this)">Desayunos</button>
-  <button onclick="subcat('almuerzos',this)">Almuerzos</button>
-  <button onclick="subcat('menudeldia',this)">Menú del día</button>
-</nav>
-
-<nav id="bebidas-subcategorias" class="subcategorias oculto">
-  <button onclick="subcat('refrescos',this)">Refrescos</button>
-  <button onclick="subcat('cervezas',this)">Cervezas</button>
-  <button onclick="subcat('blancos',this)">Vino blanco</button>
-  <button onclick="subcat('tintos',this)">Vino tinto</button>
-  <button onclick="subcat('copas',this)">Copas</button>
-  <button onclick="subcat('combinados',this)">Combinados</button>
-</nav>
-
-<div id="desayunos-subcont" class="subcategorias-container oculto"></div>
-<div id="almuerzos-subcont" class="subcategorias-container oculto"></div>
-<div id="menudeldia-subcont" class="subcategorias-container oculto"></div>
-<div id="refrescos-subcont" class="subcategorias-container oculto"></div>
-<div id="cervezas-subcont" class="subcategorias-container oculto"></div>
-<div id="blancos-subcont" class="subcategorias-container oculto"></div>
-<div id="tintos-subcont" class="subcategorias-container oculto"></div>
-<div id="copas-subcont" class="subcategorias-container oculto"></div>
-<div id="combinados-subcont" class="subcategorias-container oculto"></div>
+  <nav id="categorias-menu" class="categorias"></nav>
+  <nav id="subcategorias-menu" class="subcategorias oculto"></nav>
+  <div id="productos-view" class="oculto"></div>
+</section>
 
 <script src="datos.js"></script>
 <script src="script.js"></script>
