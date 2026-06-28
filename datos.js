@@ -338,7 +338,7 @@ const PRODUCTOS = {
     refrescos: [
       {
         nombre: "Coca-Cola",
-        descripcion: "Refresco.",
+        descripcion: "Original, Zero y Zero-Zero.",
         precio: "2,60",
         alergenos: "",
         por_unidad: false
