@@ -37,24 +37,22 @@
 </header>
 
 <nav class="categorias">
-<button class="active-cat" onclick="cat('cafes',this)">Cafés</button>
-<button onclick="cat('tapas',this)">Tapas</button>
-<button onclick="cat('principales',this)">Principales</button>
-<button onclick="cat('postres',this)">Postres</button>
+<button class="active-cat" onclick="cat('mananas',this)">La PAUsa de las mañanas</button>
+<button onclick="cat('tardes',this)">La PAUsa de las tardes</button>
+<button onclick="cat('viernesysabado',this)">La PAUsa de los viernes y sábado</button>
+<button onclick="cat('cafes',this)">Cafes</button>
 <button onclick="cat('bebidas',this)">Bebidas</button>
 </nav>
 
-<!-- Contenedores para cada categoría - se generan automáticamente con JS -->
-<div id="cafes-container" class="categorias-container"></div>
-<div id="tapas-container" class="categorias-container oculto"></div>
-<div id="principales-container" class="categorias-container oculto"></div>
-<div id="postres-container" class="categorias-container oculto"></div>
+<div id="mananas-container" class="categorias-container"></div>
+<div id="tardes-container" class="categorias-container oculto"></div>
+<div id="viernesysabado-container" class="categorias-container oculto"></div>
+<div id="cafes-container" class="categorias-container oculto"></div>
 
-<!-- Contenedor especial para bebidas con submenú -->
 <div id="bebidas-container" class="categorias-container oculto">
   <nav class="subcategorias">
-    <button class="active-subcat" onclick="subcat('tintos',this)">Vinos Tintos</button>
-    <button onclick="subcat('blancos',this)">Vinos Blancos</button>
+    <button class="active-subcat" onclick="subcat('tintos',this)">Vinos tintos</button>
+    <button onclick="subcat('blancos',this)">Vinos blancos</button>
     <button onclick="subcat('cervezas',this)">Cervezas</button>
     <button onclick="subcat('refrescos',this)">Refrescos</button>
     <button onclick="subcat('aguas',this)">Aguas</button>
@@ -84,11 +82,11 @@
     <path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>
   </svg>
 </a>
-<a id="instagramIcon" href="#" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg></a>
+<a id="instagramIcon" href="#" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
 <a id="facebookIcon" href="#" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M14 8h3V4h-3c-3 0-5 2-5 5v3H6v4h3v4h4v-4h3l1-4h-4V9c0-.7.3-1 1-1z"/></svg></a>
 <a id="whatsappIcon" href="#" target="_blank" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-    <path fill="currentColor" d="M20.52 3.48A11.94 11.94 0 0 0 12.03 0C5.4 0 .02 5.38.02 12c0 2.12.55 4.18 1.6 6L0 24l6.15-1.61a11.97 11.97 0 0 0 5.88 1.5h.01c6.62 0 12-5.38 12-12 0-3.2-1.25-6.2-3.52-8.41zM12.04 21.86h-.01a9.94 9.94 0 0 1-5.07-1.39l-.36-.21-3.65.96.97-3.56-.24-.37A9.9 9.9 0 0 1 2.04 12C2.04 6.5 6.52 2.02 12.03 2.02c2.66 0 5.15 1.03 7.03 2.9a9.86 9.86 0 0 1 2.92 7.03c0 5.5-4.48 9.91-9.94 9.91zm5.45-7.43c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.1 4.49.71.31 1.27.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35z"/>
+    <path fill="currentColor" d="M20.52 3.48A11.94 11.94 0 0 0 12.03 0C5.4 0 .02 5.38.02 12c0 2.12.55 4.18 1.6 6L0 24l6.15-1.61a11.97 11.97 0 0 0 5.88 1.5h.01c6.62 0 12-5.38 12-12 0-3.2-1.25-6.2-3.52-8.4zM12.04 21.3h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.65.96.98-3.56-.24-.37A9.93 9.93 0 0 1 2.1 12C2.1 6.53 6.56 2.08 12.03 2.08c2.65 0 5.13 1.03 7 2.9a9.86 9.86 0 0 1 2.9 7c0 5.47-4.45 9.92-9.89 9.92zm5.45-7.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.41-1.5-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35z"/>
   </svg>
 </a>
 </nav>
