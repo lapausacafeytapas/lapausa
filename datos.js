@@ -319,15 +319,22 @@ const PRODUCTOS = {
     refrescos: [
       {
         nombre: "Agua pequeña",
-        descripcion: "Bebida.",
+        descripcion: "",
         precio: "1,00",
         alergenos: "",
         por_unidad: false
       },
       {
         nombre: "Agua grande",
-        descripcion: "Bebida.",
+        descripcion: "",
         precio: "1,50",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "Agua con gas",
+        descripcion: "",
+        precio: "2,00",
         alergenos: "",
         por_unidad: false
       },
@@ -347,49 +354,42 @@ const PRODUCTOS = {
       },
       {
         nombre: "Aquarius",
-        descripcion: "Bebida refrescante.",
+        descripcion: "Naranja, limón o melocotón.",
         precio: "2,00",
         alergenos: "",
         por_unidad: false
       },
       {
         nombre: "Fuze Tea",
-        descripcion: "Té refrescante.",
+        descripcion: "",
         precio: "2,00",
         alergenos: "",
         por_unidad: false
       },
       {
         nombre: "Tónica",
-        descripcion: "Refresco.",
+        descripcion: "",
         precio: "2,00",
         alergenos: "",
         por_unidad: false
       },
       {
         nombre: "Sprite",
-        descripcion: "Refresco.",
+        descripcion: "",
         precio: "2,00",
         alergenos: "",
         por_unidad: false
       },
       {
         nombre: "Bitter",
-        descripcion: "Refresco.",
-        precio: "2,00",
-        alergenos: "",
-        por_unidad: false
-      },
-      {
-        nombre: "Sweps",
-        descripcion: "Refresco.",
+        descripcion: "",
         precio: "2,00",
         alergenos: "",
         por_unidad: false
       },
       {
         nombre: "Zumo Pago",
-        descripcion: "Zumo.",
+        descripcion: "",
         precio: "2,00",
         alergenos: "",
         por_unidad: false
