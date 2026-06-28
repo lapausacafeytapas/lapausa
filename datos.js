@@ -38,7 +38,7 @@ const PRODUCTOS = {
       por_unidad: false
     },
     {
-      nombre: "Capuccino",
+      nombre: "Capuchino",
       descripcion: "Con espuma y cacao.",
       precio: "2,40",
       alergenos: "L",
@@ -73,7 +73,7 @@ const PRODUCTOS = {
       por_unidad: false
     },
     {
-      nombre: "Mocca",
+      nombre: "Moca",
       descripcion: "Chocolate.",
       precio: "2,90",
       alergenos: "L",
@@ -184,7 +184,7 @@ const PRODUCTOS = {
       por_unidad: false
     },
     {
-      nombre: "Pasta Carbonara",
+      nombre: "Pasta carbonara",
       descripcion: "Salsa cremosa.",
       precio: "11,50",
       alergenos: "G,L,H",
