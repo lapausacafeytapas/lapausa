@@ -5,306 +5,227 @@ const inicio = document.getElementById('inicio');
 const carta = document.getElementById('carta');
 const tituloCarta = document.getElementById('titulo-carta');
 const categoriasMenu = document.getElementById('categorias-menu');
+const subcategoriasMenu = document.getElementById('subcategorias-menu');
+const productosView = document.getElementById('productos-view');
 
-let vistaCarta = 'categorias';
+const ESTRUCTURA_CARTA = {
+  mananas: {
+    titulo: 'La PAUsa de las mañanas',
+    subcategorias: [
+      { id: 'desayunos', titulo: 'Desayunos' },
+      { id: 'almuerzos', titulo: 'Almuerzos' },
+      { id: 'menudeldia', titulo: 'Menú del día' }
+    ]
+  },
+  tardes: {
+    titulo: 'La PAUsa de las tardes',
+    productos: 'tardes'
+  },
+  viernesysabado: {
+    titulo: 'La PAUsa de las noches',
+    productos: 'viernesysabado'
+  },
+  cafes: {
+    titulo: 'Cafés',
+    productos: 'cafes'
+  },
+  bebidas: {
+    titulo: 'Bebidas',
+    subcategorias: [
+      { id: 'refrescos', titulo: 'Refrescos' },
+      { id: 'cervezas', titulo: 'Cervezas' },
+      { id: 'blancos', titulo: 'Vino blanco' },
+      { id: 'tintos', titulo: 'Vino tinto' },
+      { id: 'copas', titulo: 'Copas' },
+      { id: 'combinados', titulo: 'Combinados' }
+    ]
+  }
+};
+
+let vistaActual = 'inicio';
 let categoriaActual = null;
-let subcategoriaActual = null;
-
-const titulosCategoria = {
-  mananas: 'La PAUsa de las mañanas',
-  tardes: 'La PAUsa de las tardes',
-  viernesysabado: 'La PAUsa de las noches',
-  cafes: 'Cafés',
-  bebidas: 'Bebidas'
-};
-
-const subcategoriasPorCategoria = {
-  mananas: ['desayunos', 'almuerzos', 'menudeldia'],
-  bebidas: ['refrescos', 'cervezas', 'blancos', 'tintos', 'copas', 'combinados']
-};
-
-const menuSubcategoriasPorCategoria = {
-  mananas: 'mananas-subcategorias',
-  bebidas: 'bebidas-subcategorias'
-};
-
-function ocultarTodoCarta() {
-  categoriasMenu.classList.add('oculto');
-
-  document.querySelectorAll('.categorias-container').forEach(container => {
-    container.classList.add('oculto');
-  });
-
-  document.querySelectorAll('.subcategorias').forEach(menu => {
-    menu.classList.add('oculto');
-  });
-
-  document.querySelectorAll('.subcategorias-container').forEach(container => {
-    container.classList.add('oculto');
-  });
-}
 
 function mostrarCarta() {
   inicio.classList.remove('active');
   carta.classList.add('active');
-  volverACategorias();
+  renderCategorias();
   window.scrollTo(0, 0);
 }
 
 function mostrarInicio() {
   carta.classList.remove('active');
   inicio.classList.add('active');
+  vistaActual = 'inicio';
+  categoriaActual = null;
   window.scrollTo(0, 0);
 }
 
 function volverCarta() {
-  if (vistaCarta === 'productos') {
-    if (subcategoriasPorCategoria[categoriaActual]) {
-      mostrarSubcategorias(categoriaActual);
+  if (vistaActual === 'productos') {
+    if (categoriaActual && ESTRUCTURA_CARTA[categoriaActual]?.subcategorias) {
+      renderSubcategorias(categoriaActual);
     } else {
-      volverACategorias();
+      renderCategorias();
     }
     return;
   }
 
-  if (vistaCarta === 'subcategorias') {
-    volverACategorias();
+  if (vistaActual === 'subcategorias') {
+    renderCategorias();
     return;
   }
 
   mostrarInicio();
 }
 
-function volverACategorias() {
-  vistaCarta = 'categorias';
+function limpiarVistaCarta() {
+  categoriasMenu.classList.add('oculto');
+  subcategoriasMenu.classList.add('oculto');
+  productosView.classList.add('oculto');
+  categoriasMenu.innerHTML = '';
+  subcategoriasMenu.innerHTML = '';
+  productosView.innerHTML = '';
+}
+
+function renderCategorias() {
+  vistaActual = 'categorias';
   categoriaActual = null;
-  subcategoriaActual = null;
   tituloCarta.textContent = 'Nuestra Carta';
-  ocultarTodoCarta();
+  limpiarVistaCarta();
   categoriasMenu.classList.remove('oculto');
 
-  document.querySelectorAll('.categorias button').forEach(b => {
-    b.classList.remove('active-cat');
-  });
-
-  document.querySelectorAll('.subcategorias button').forEach(b => {
-    b.classList.remove('active-subcat');
+  Object.entries(ESTRUCTURA_CARTA).forEach(([id, categoria]) => {
+    const button = document.createElement('button');
+    button.textContent = categoria.titulo;
+    button.onclick = () => abrirCategoria(id);
+    categoriasMenu.appendChild(button);
   });
 }
 
-// ==========================================
-// CAMBIO DE CATEGORÍAS
-// ==========================================
-function cat(id, btn) {
-  document.querySelectorAll('.categorias button').forEach(b => {
-    b.classList.remove('active-cat');
-  });
-  if (btn) btn.classList.add('active-cat');
-
+function abrirCategoria(id) {
   categoriaActual = id;
-  subcategoriaActual = null;
+  const categoria = ESTRUCTURA_CARTA[id];
 
-  if (subcategoriasPorCategoria[id]) {
-    mostrarSubcategorias(id);
+  if (categoria.subcategorias) {
+    renderSubcategorias(id);
     return;
   }
 
-  mostrarProductosDirectos(id);
+  renderProductos(categoria.titulo, PRODUCTOS[categoria.productos] || []);
 }
 
-function mostrarSubcategorias(id) {
-  vistaCarta = 'subcategorias';
+function renderSubcategorias(id) {
+  vistaActual = 'subcategorias';
   categoriaActual = id;
-  subcategoriaActual = null;
-  tituloCarta.textContent = titulosCategoria[id] || 'Nuestra Carta';
-  ocultarTodoCarta();
+  const categoria = ESTRUCTURA_CARTA[id];
+  tituloCarta.textContent = categoria.titulo;
+  limpiarVistaCarta();
+  subcategoriasMenu.classList.remove('oculto');
 
-  const menuId = menuSubcategoriasPorCategoria[id];
-  const menu = document.getElementById(menuId);
-  if (menu) {
-    menu.classList.remove('oculto');
+  categoria.subcategorias.forEach(subcategoria => {
+    const button = document.createElement('button');
+    button.textContent = subcategoria.titulo;
+    button.onclick = () => abrirSubcategoria(id, subcategoria.id, subcategoria.titulo);
+    subcategoriasMenu.appendChild(button);
+  });
+}
+
+function abrirSubcategoria(categoriaId, subcategoriaId, titulo) {
+  if (categoriaId === 'bebidas') {
+    renderProductos(titulo, PRODUCTOS.bebidas[subcategoriaId] || []);
+    return;
   }
 
-  document.querySelectorAll('.subcategorias button').forEach(b => {
-    b.classList.remove('active-subcat');
-  });
-
-  window.scrollTo(0, 0);
+  renderProductos(titulo, PRODUCTOS[subcategoriaId] || [], subcategoriaId);
 }
 
-function mostrarProductosDirectos(id) {
-  vistaCarta = 'productos';
-  categoriaActual = id;
-  subcategoriaActual = null;
-  tituloCarta.textContent = titulosCategoria[id] || 'Nuestra Carta';
-  ocultarTodoCarta();
+function renderProductos(titulo, productos, claveLeyenda = null) {
+  vistaActual = 'productos';
+  tituloCarta.textContent = titulo;
+  limpiarVistaCarta();
+  productosView.classList.remove('oculto');
 
-  const container = document.getElementById(id + '-container');
-  if (container) {
-    container.classList.remove('oculto');
+  if (claveLeyenda === 'desayunos') {
+    productosView.appendChild(crearLeyenda('Incluye tostada o bollería y café'));
   }
 
-  window.scrollTo(0, 0);
-}
-
-// ==========================================
-// CAMBIO DE SUBCATEGORÍAS
-// ==========================================
-function subcat(id, btn) {
-  vistaCarta = 'productos';
-  subcategoriaActual = id;
-  tituloCarta.textContent = btn ? btn.textContent : 'Nuestra Carta';
-  ocultarTodoCarta();
-
-  const container = document.getElementById(id + '-subcont');
-  if (container) {
-    container.classList.remove('oculto');
+  if (claveLeyenda === 'almuerzos') {
+    productosView.appendChild(crearLeyenda('Incluye bocadillo, bebida y café'));
   }
 
-  document.querySelectorAll('.subcategorias button').forEach(b => {
-    b.classList.remove('active-subcat');
-  });
-  if (btn) btn.classList.add('active-subcat');
+  if (claveLeyenda === 'menudeldia') {
+    productosView.appendChild(crearLeyenda('Incluye una bebida, pan y postre o café'));
+  }
 
-  window.scrollTo(0, 0);
-}
+  if (!productos.length) {
+    const vacio = document.createElement('p');
+    vacio.textContent = 'Próximamente.';
+    productosView.appendChild(vacio);
+    return;
+  }
 
-// ==========================================
-// GENERAR PRODUCTOS DESDE DATOS
-// ==========================================
-function generarProductos() {
-  const categorias = ['cafes', 'desayunos', 'almuerzos', 'menudeldia', 'tardes', 'viernesysabado'];
-
-  categorias.forEach(categoria => {
-    const container = document.getElementById(categoria + '-container') || document.getElementById(categoria + '-subcont');
-    const productos = PRODUCTOS[categoria];
-
-    if (container && productos) {
-      container.innerHTML = '';
-
-      if (categoria === 'desayunos') {
-        const leyenda = document.createElement('div');
-        leyenda.className = 'leyenda-subcategoria';
-        leyenda.textContent = 'Incluye tostada o bollería y café';
-        container.appendChild(leyenda);
-      }
-
-      if (categoria === 'almuerzos') {
-        const leyenda = document.createElement('div');
-        leyenda.className = 'leyenda-subcategoria';
-        leyenda.textContent = 'Incluye bocadillo, bebida y café';
-        container.appendChild(leyenda);
-      }
-
-      if (categoria === 'menudeldia') {
-        const leyenda = document.createElement('div');
-        leyenda.className = 'leyenda-subcategoria';
-        leyenda.textContent = 'Incluye una bebida, pan y postre o café';
-        container.appendChild(leyenda);
-      }
-
-      productos.forEach(producto => {
-        const productoHTML = document.createElement('div');
-        productoHTML.className = 'producto';
-
-        let alergenosText = '';
-        if (producto.alergenos) {
-          const codigosAlergenos = producto.alergenos.split(',').map(c => c.trim());
-          alergenosText = codigosAlergenos
-            .map(codigo => ALERGENOS[codigo] || codigo)
-            .join(' · ');
-        }
-
-        let precioText = '';
-        if (producto.precio) {
-          const sufijo = producto.por_unidad ? '€/u' : '€';
-          precioText = producto.precio + ' ' + sufijo;
-        }
-
-        productoHTML.innerHTML = `
-          <div>
-            <h3>${producto.nombre}</h3>
-            <p>${producto.descripcion}</p>
-            ${alergenosText ? `<small>${alergenosText}</small>` : ''}
-          </div>
-          <strong>${precioText}</strong>
-        `;
-
-        container.appendChild(productoHTML);
-      });
-    }
-  });
-
-  generarBebidas();
-}
-
-// ==========================================
-// GENERAR BEBIDAS CON SUBMENÚS
-// ==========================================
-function generarBebidas() {
-  const subcategorias = ['refrescos', 'cervezas', 'blancos', 'tintos', 'copas', 'combinados'];
-
-  subcategorias.forEach(subcategoria => {
-    const container = document.getElementById(subcategoria + '-subcont');
-    const productos = PRODUCTOS.bebidas[subcategoria];
-
-    if (container && productos) {
-      container.innerHTML = '';
-
-      productos.forEach(producto => {
-        const productoHTML = document.createElement('div');
-        productoHTML.className = 'producto';
-
-        let alergenosText = '';
-        if (producto.alergenos) {
-          const codigosAlergenos = producto.alergenos.split(',').map(c => c.trim());
-          alergenosText = codigosAlergenos
-            .map(codigo => ALERGENOS[codigo] || codigo)
-            .join(' · ');
-        }
-
-        let precioHTML = '';
-        if (producto.precio_copa && producto.precio_botella) {
-          precioHTML = `
-            <div class="producto-precios">
-              <div>
-                <strong>${producto.precio_copa}€</strong>
-                <small>Copa</small>
-              </div>
-              <div>
-                <strong>${producto.precio_botella}€</strong>
-                <small>Botella</small>
-              </div>
-            </div>
-          `;
-        } else if (producto.precio) {
-          const sufijo = producto.por_unidad ? '€/u' : '€';
-          precioHTML = `<strong>${producto.precio} ${sufijo}</strong>`;
-        }
-
-        productoHTML.innerHTML = `
-          <div>
-            <h3>${producto.nombre}</h3>
-            <p>${producto.descripcion}</p>
-            ${alergenosText ? `<small>${alergenosText}</small>` : ''}
-          </div>
-          ${precioHTML}
-        `;
-
-        container.appendChild(productoHTML);
-      });
-    }
+  productos.forEach(producto => {
+    productosView.appendChild(crearProducto(producto));
   });
 }
 
-// Generar productos cuando carga la página
-generarProductos();
-volverACategorias();
+function crearLeyenda(texto) {
+  const leyenda = document.createElement('div');
+  leyenda.className = 'leyenda-subcategoria';
+  leyenda.textContent = texto;
+  return leyenda;
+}
+
+function crearProducto(producto) {
+  const productoHTML = document.createElement('div');
+  productoHTML.className = 'producto';
+
+  let alergenosText = '';
+  if (producto.alergenos) {
+    const codigosAlergenos = producto.alergenos.split(',').map(c => c.trim());
+    alergenosText = codigosAlergenos
+      .map(codigo => ALERGENOS[codigo] || codigo)
+      .join(' · ');
+  }
+
+  let precioHTML = '';
+  if (producto.precio_copa && producto.precio_botella) {
+    precioHTML = `
+      <div class="producto-precios">
+        <div>
+          <strong>${producto.precio_copa}€</strong>
+          <small>Copa</small>
+        </div>
+        <div>
+          <strong>${producto.precio_botella}€</strong>
+          <small>Botella</small>
+        </div>
+      </div>
+    `;
+  } else if (producto.precio) {
+    const sufijo = producto.por_unidad ? '€/u' : '€';
+    precioHTML = `<strong>${producto.precio} ${sufijo}</strong>`;
+  } else {
+    precioHTML = '<strong></strong>';
+  }
+
+  productoHTML.innerHTML = `
+    <div>
+      <h3>${producto.nombre}</h3>
+      <p>${producto.descripcion}</p>
+      ${alergenosText ? `<small>${alergenosText}</small>` : ''}
+    </div>
+    ${precioHTML}
+  `;
+
+  return productoHTML;
+}
+
+renderCategorias();
 
 // ==========================================
 // CONFIGURACIÓN DE ENLACES
 // ==========================================
-
 document.getElementById('mapsIcon').href = `https://maps.google.com/?q=${CONFIG.coordenadas.lat},${CONFIG.coordenadas.lng}`;
 document.getElementById('instagramIcon').href = CONFIG.instagram;
 document.getElementById('facebookIcon').href = CONFIG.facebook;
