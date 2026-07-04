@@ -38,10 +38,10 @@ const PRODUCTOS = {
       por_unidad: false
     },
     {
-      nombre: "Capuccino",
-      descripcion: "",
-      precio: "2,00",
-      alergenos: "L",
+      nombre: "Infusión",
+      descripcion: "Manzanilla, Poleo, Frutos rojos, Rooibos, Té rojo, Té verde, Té earl grey y Té english breakfast",
+      precio: "1,70",
+      alergenos: "",
       por_unidad: false
     },
     {
@@ -52,17 +52,17 @@ const PRODUCTOS = {
       por_unidad: false
     },
     {
-      nombre: "Cremaet",
+      nombre: "Capuccino",
       descripcion: "",
-      precio: "2,20",
-      alergenos: "SU",
+      precio: "2,00",
+      alergenos: "L",
       por_unidad: false
     },
     {
-      nombre: "Infusión",
+      nombre: "Nesquik",
       descripcion: "",
-      precio: "1,70",
-      alergenos: "",
+      precio: "1,80",
+      alergenos: "L",
       por_unidad: false
     },
     {
