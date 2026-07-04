@@ -155,7 +155,7 @@ function renderProductos(titulo, productos, claveLeyenda = null) {
   }
 
   if (claveLeyenda === 'cafes') {
-    productosView.appendChild(crearLeyenda('Puedes pedir tu café con leche sin lactosa y leche de soja'));
+    productosView.appendChild(crearLeyenda('Suplemento del tiempo 0,20€'));
   }
 
   if (claveLeyenda === 'menudeldia') {
