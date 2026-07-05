@@ -47,10 +47,18 @@ const SUBCATEGORIAS_OCULTAS_BEBIDAS = new Set(['blancos', 'combinados']);
 
 let vistaActual = 'inicio';
 let categoriaActual = null;
+let _enPopstate = false;
+
+function pushEstado(estado) {
+  if (!_enPopstate) {
+    history.pushState(estado, '');
+  }
+}
 
 function mostrarCarta() {
   inicio.classList.remove('active');
   carta.classList.add('active');
+  pushEstado({ nivel: 'categorias' });
   renderCategorias();
   window.scrollTo(0, 0);
 }
@@ -114,6 +122,7 @@ function abrirCategoria(id) {
     return;
   }
 
+  pushEstado({ nivel: 'productos', tipo: 'categoria', categoria: id });
   const productos = obtenerProductosCategoria(id);
   renderProductos(categoria.titulo, productos, categoria.productos);
 }
@@ -126,6 +135,7 @@ function obtenerProductosCategoria(categoriaId) {
 }
 
 function renderSubcategorias(id) {
+  pushEstado({ nivel: 'subcategorias', categoria: id });
   vistaActual = 'subcategorias';
   categoriaActual = id;
   const categoria = ESTRUCTURA_CARTA[id];
@@ -165,6 +175,7 @@ function obtenerProductosSubcategoria(categoriaId, subcategoriaId) {
 }
 
 function abrirSubcategoria(categoriaId, subcategoriaId, titulo) {
+  pushEstado({ nivel: 'productos', tipo: 'subcategoria', categoria: categoriaId, subcategoria: subcategoriaId, titulo: titulo });
   const productos = obtenerProductosSubcategoria(categoriaId, subcategoriaId);
   renderProductos(titulo, productos, subcategoriaId);
 }
@@ -295,3 +306,36 @@ document.getElementById('mapsIcon').href = `https://maps.google.com/?q=${CONFIG.
 document.getElementById('instagramIcon').href = CONFIG.instagram;
 document.getElementById('facebookIcon').href = CONFIG.facebook;
 document.getElementById('whatsappIcon').href = `https://wa.me/${CONFIG.telefono}`;
+
+// ==========================================
+// HISTORIAL DEL NAVEGADOR (botón atrás)
+// ==========================================
+history.replaceState({ nivel: 'inicio' }, '');
+
+window.addEventListener('popstate', function(e) {
+  _enPopstate = true;
+  const estado = e.state;
+
+  if (!estado || estado.nivel === 'inicio') {
+    mostrarInicio();
+  } else if (estado.nivel === 'categorias') {
+    inicio.classList.remove('active');
+    carta.classList.add('active');
+    renderCategorias();
+  } else if (estado.nivel === 'subcategorias') {
+    inicio.classList.remove('active');
+    carta.classList.add('active');
+    renderSubcategorias(estado.categoria);
+  } else if (estado.nivel === 'productos') {
+    inicio.classList.remove('active');
+    carta.classList.add('active');
+    if (estado.tipo === 'subcategoria') {
+      abrirSubcategoria(estado.categoria, estado.subcategoria, estado.titulo);
+    } else {
+      abrirCategoria(estado.categoria);
+    }
+  }
+
+  _enPopstate = false;
+  window.scrollTo(0, 0);
+});
