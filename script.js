@@ -239,7 +239,7 @@ function crearProducto(producto) {
       </div>
     `;
   } else if (producto.precio) {
-    const sufijo = producto.por_unidad ? '€/u' : '€';
+    const sufijo = producto.por_unidad ? '€/ud.' : '€';
     precioHTML = `<strong>${producto.precio} ${sufijo}</strong>`;
   } else {
     precioHTML = '<strong></strong>';
