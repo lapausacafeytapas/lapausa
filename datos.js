@@ -84,7 +84,7 @@ const PRODUCTOS = {
     },
     {
       nombre: "Tostada especial",
-      descripcion: "Tomate con atún, tomate con jamón, tomate con queso fresco y anchoas, queso crema y salmón ahumado.",
+      descripcion: "Tomate con atún, tomate con jamón, queso crema y salmón ahumado.",
       precio: "3,80",
       alergenos: "G,L,P",
       por_unidad: false
@@ -105,7 +105,7 @@ const PRODUCTOS = {
     },
     {
       nombre: "Suplemento zumo de naranja natural",
-      descripcion: "Complemento para desayuno.",
+      descripcion: "Producto de temporada.",
       precio: "1,50",
       alergenos: "",
       por_unidad: false
@@ -116,27 +116,27 @@ const PRODUCTOS = {
     {
       nombre: "Bocadillo del día",
       descripcion: "Nuestra propuesta de hoy.",
-      precio: "7,00",
+      precio: "6,50",
       alergenos: "G",
       por_unidad: false
     },
     {
       nombre: "Bocadillo de carta",
       descripcion: "Elige uno de la lista.",
-      precio: "8,00",
+      precio: "7,50",
       alergenos: "G",
       por_unidad: false
     },
     {
       nombre: "Suplemento Tercio de cerveza",
-      descripcion: "Amstel, Heineken o Estrella Galicia.",
+      descripcion: "Amstel, Mahou o Cruzcampo.",
       precio: "0,50",
       alergenos: "G",
       por_unidad: false
     },
     {
       nombre: "Suplemento Cremaet",
-      descripcion: "Complemento para almuerzo.",
+      descripcion: "",
       precio: "1,00",
       alergenos: "SU",
       por_unidad: false
