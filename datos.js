@@ -539,37 +539,97 @@ const PRODUCTOS = {
     ],
     tintos: [
       {
-        nombre: "Copa Rioja",
-        descripcion: "Vino tinto.",
+        nombre: "Copas de vino",
+        descripcion: "",
         precio: "",
+        alergenos: "",
+        por_unidad: false,
+        es_tipo: true
+      },
+      {
+        nombre: "Copa vino tinto Bocabadat D.O Valencia",
+        descripcion: "Tempranillo",
+        precio: "3,00",
         alergenos: "SU",
         por_unidad: false
       },
       {
-        nombre: "Botella Rioja",
-        descripcion: "Vino tinto.",
-        precio: "",
+        nombre: "Copa vino blanco Bocabadat D.O Alicante",
+        descripcion: "Macabeo",
+        precio: "3,00",
         alergenos: "SU",
         por_unidad: false
       },
       {
-        nombre: "Botella Ribera del Duero",
-        descripcion: "Vino tinto.",
+        nombre: "Vino Tinto",
+        descripcion: "",
         precio: "",
+        alergenos: "",
+        por_unidad: false,
+        es_tipo: true
+      },
+      {
+        nombre: "Bocabadat",
+        descripcion: "D.O. Valencia (Tempranillo)",
+        precio: "13,00",
         alergenos: "SU",
         por_unidad: false
       },
       {
-        nombre: "Sangría",
-        descripcion: "Vino tinto.",
-        precio: "",
+        nombre: "Nebral",
+        descripcion: "D.O. Ribera del Duero (Tinta fina)",
+        precio: "15,00",
         alergenos: "SU",
         por_unidad: false
       },
       {
-        nombre: "Tinto de verano",
-        descripcion: "Vino tinto.",
+        nombre: "Azpilicueta Crianza",
+        descripcion: "D.O. Rioja (Tempranillo)",
+        precio: "15,50",
+        alergenos: "SU",
+        por_unidad: false
+      },
+      {
+        nombre: "Vino Blanco",
+        descripcion: "",
         precio: "",
+        alergenos: "",
+        por_unidad: false,
+        es_tipo: true
+      },
+      {
+        nombre: "Bocabadat",
+        descripcion: "D.O. Alicante (Macabeo)",
+        precio: "13,00",
+        alergenos: "SU",
+        por_unidad: false
+      },
+      {
+        nombre: "Marqués de Vizhoja",
+        descripcion: "D.O. Rias Baixas (Albariño, Teixadura y Loureiro)",
+        precio: "14,00",
+        alergenos: "SU",
+        por_unidad: false
+      },
+      {
+        nombre: "Rey Santo",
+        descripcion: "D.O.Rueda (Verdejo)",
+        precio: "15,00",
+        alergenos: "SU",
+        por_unidad: false
+      },
+      {
+        nombre: "Vino Rosado",
+        descripcion: "",
+        precio: "",
+        alergenos: "",
+        por_unidad: false,
+        es_tipo: true
+      },
+      {
+        nombre: "Alquézar aguja natural",
+        descripcion: "D.O.Somontano (Tempranillo y garnacha)",
+        precio: "15,00",
         alergenos: "SU",
         por_unidad: false
       }
