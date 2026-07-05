@@ -114,7 +114,15 @@ function abrirCategoria(id) {
     return;
   }
 
-  renderProductos(categoria.titulo, PRODUCTOS[categoria.productos] || [], categoria.productos);
+  const productos = obtenerProductosCategoria(id);
+  renderProductos(categoria.titulo, productos, categoria.productos);
+}
+
+function obtenerProductosCategoria(categoriaId) {
+  const categoria = ESTRUCTURA_CARTA[categoriaId];
+  if (!categoria || !categoria.productos) return [];
+  const lista = PRODUCTOS[categoria.productos];
+  return Array.isArray(lista) ? lista : [];
 }
 
 function renderSubcategorias(id) {
@@ -140,7 +148,7 @@ function renderSubcategorias(id) {
 function obtenerProductosSubcategoria(categoriaId, subcategoriaId) {
   if (categoriaId === 'bebidas') {
     // Estructura preferida: PRODUCTOS.bebidas.refrescos
-    if (PRODUCTOS?.bebidas && !Array.isArray(PRODUCTOS.bebidas)) {
+    if (PRODUCTOS && PRODUCTOS.bebidas && !Array.isArray(PRODUCTOS.bebidas)) {
       const desdeBebidas = PRODUCTOS.bebidas[subcategoriaId];
       if (Array.isArray(desdeBebidas)) return desdeBebidas;
     }
@@ -183,7 +191,7 @@ function renderProductos(titulo, productos, claveLeyenda = null) {
     productosView.appendChild(crearLeyenda('Incluye una bebida, pan y postre o café'));
   }
 
-  if (!productos.length) {
+  if (!productos || !productos.length) {
     const vacio = document.createElement('p');
     vacio.style.padding = '15px';
     vacio.textContent = 'Próximamente.';
@@ -218,11 +226,13 @@ function crearProducto(producto) {
   if (producto.alergenos) {
     const codigosAlergenos = producto.alergenos.split(',').map(c => c.trim());
     alergenosText = codigosAlergenos
-      .map(codigo => ALERGENOS[codigo] || codigo)
+      .map(codigo => (typeof ALERGENOS !== 'undefined' && ALERGENOS[codigo]) || codigo)
       .join(' · ');
   }
 
   let precioHTML = '';
+
+  // Producto con precios de chupito / copa / combinado
   if ('precio_chupito' in producto || 'precio_combinado' in producto) {
     const columnas = [
       { etiqueta: 'Chupito', valor: producto.precio_chupito || '' },
@@ -230,16 +240,19 @@ function crearProducto(producto) {
       { etiqueta: 'Combinado', valor: producto.precio_combinado || '' }
     ].filter(columna => columna.valor);
 
-    precioHTML = `
-      <div class="producto-precios">
-        ${columnas.map(columna => `
-          <div>
-            <strong>${columna.valor ? `${columna.valor}€` : ''}</strong>
-            <small>${columna.etiqueta}</small>
-          </div>
-        `).join('')}
-      </div>
-    `;
+    if (columnas.length) {
+      precioHTML = `
+        <div class="producto-precios">
+          ${columnas.map(columna => `
+            <div>
+              <strong>${columna.valor}€</strong>
+              <small>${columna.etiqueta}</small>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+  // Producto con precio de copa y botella (vinos)
   } else if (producto.precio_copa && producto.precio_botella) {
     precioHTML = `
       <div class="producto-precios">
@@ -253,17 +266,20 @@ function crearProducto(producto) {
         </div>
       </div>
     `;
+  // Producto con precio simple
   } else if (producto.precio) {
     const sufijo = producto.tipo_precio === 'pax' ? '€/pax.' : (producto.por_unidad ? '€/ud.' : '€');
-    precioHTML = `<strong>${producto.precio} ${sufijo}</strong>`;
+    precioHTML = `<strong>${producto.precio}${sufijo}</strong>`;
   } else {
-    precioHTML = '<strong></strong>';
+    precioHTML = '';
   }
+
+  const descripcion = producto.descripcion || '';
 
   productoHTML.innerHTML = `
     <div>
       <h3>${producto.nombre}</h3>
-      <p>${producto.descripcion}</p>
+      ${descripcion ? `<p>${descripcion}</p>` : ''}
       ${alergenosText ? `<small>${alergenosText}</small>` : ''}
     </div>
     ${precioHTML}
