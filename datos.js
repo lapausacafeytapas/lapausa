@@ -19,6 +19,7 @@ const PRODUCTOS = {
     { nombre: "Espresso", descripcion: "", precio: "1,30", alergenos: "", por_unidad: false },
     { nombre: "Cortado", descripcion: "", precio: "1,50", alergenos: "L", por_unidad: false },
     { nombre: "Café con leche", descripcion: "", precio: "1,70", alergenos: "L", por_unidad: false },
+    { nombre: "Bombón", descripcion: "", precio: "1,80", alergenos: "L", por_unidad: false },
     {
       nombre: "Infusión",
       descripcion: "Manzanilla, Poleo, Frutos rojos, Rooibos, Té rojo, Té verde, Té earl grey y Té english breakfast",
