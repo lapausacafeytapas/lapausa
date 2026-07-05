@@ -76,6 +76,8 @@ border-radius:8px;
 .producto-precios{display:flex;gap:15px;min-width:auto;text-align:right}
 .producto-precios div{display:flex;flex-direction:column}
 .producto-precios small{font-size:0.75rem;color:#aaa}
+.producto-tipo{background:transparent;border:none;border-bottom:1px solid #2f2f2f;border-radius:0;box-shadow:none;padding:12px 4px 8px;margin:8px 0 0}
+.producto-tipo h3{font-size:1.02rem;letter-spacing:.3px;text-transform:uppercase;color:#7fbf7f}
 .leyenda-subcategoria{margin:0 0 14px;padding:0 4px;color:#bdbdbd;font-size:.9rem;font-style:italic;font-weight:400;letter-spacing:.2px}
 
 @media (max-width: 768px){

@@ -183,6 +183,13 @@ function crearLeyenda(texto) {
 }
 
 function crearProducto(producto) {
+  if (producto.es_tipo) {
+    const tipoHTML = document.createElement('div');
+    tipoHTML.className = 'producto producto-tipo';
+    tipoHTML.innerHTML = `<h3>${producto.nombre}</h3>`;
+    return tipoHTML;
+  }
+
   const productoHTML = document.createElement('div');
   productoHTML.className = 'producto';
 
@@ -200,7 +207,7 @@ function crearProducto(producto) {
       { etiqueta: 'Chupito', valor: producto.precio_chupito || '' },
       { etiqueta: 'Copa', valor: producto.precio_copa || '' },
       { etiqueta: 'Combinado', valor: producto.precio_combinado || '' }
-    ];
+    ].filter(columna => columna.valor);
 
     precioHTML = `
       <div class="producto-precios">
