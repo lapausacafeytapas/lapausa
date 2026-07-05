@@ -71,7 +71,9 @@ const PRODUCTOS = {
     { nombre: "Manchego", descripcion: "Oreja a la plancha con salsa mery.", precio: "", alergenos: "G,MO", por_unidad: false },
     { nombre: "Pastor", descripcion: "Bacon, queso de cabra y pimientos verdes.", precio: "", alergenos: "G,L", por_unidad: false },
     { nombre: "Blanc i negre", descripcion: "Longaniza con morcilla.", precio: "", alergenos: "G", por_unidad: false },
-    { nombre: "Francés", descripcion: "Tomate, tortilla francesa y jamón.", precio: "", alergenos: "G,H", por_unidad: false }
+    { nombre: "Francés", descripcion: "Tomate, tortilla francesa y jamón.", precio: "", alergenos: "G,H", por_unidad: false },
+    { nombre: "Sándwich mixto", descripcion: "", precio: "", alergenos: "G,L", por_unidad: false },
+    { nombre: "Sándwich vegetal", descripcion: "Lechuga, tomate, mahonesa, atún, aceitunas y huevo duro.", precio: "", alergenos: "G,H,P", por_unidad: false }
   ],
 
   menudeldia: [
