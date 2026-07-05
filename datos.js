@@ -232,23 +232,37 @@ const PRODUCTOS = {
 
   menudeldia: [
     {
-      nombre: "1 primero y 1 segundo",
-      descripcion: "Menú del día.",
+      nombre: "Menú completo",
+      descripcion: "Incluye, primero, segundo, bebida, postre y café",
       precio: "13,00",
       alergenos: "",
       por_unidad: false
     },
     {
-      nombre: "2 segundos",
-      descripcion: "Menú del día.",
-      precio: "14,00",
+      nombre: "Medio menú",
+      descripcion: "Incluye un primero/segundo, bebida, postre y café",
+      precio: "11,00",
       alergenos: "",
       por_unidad: false
     },
     {
       nombre: "Plato único",
-      descripcion: "Menú del día.",
+      descripcion: "Incluye un primero / segundo, bebida y café",
       precio: "10,00",
+      alergenos: "",
+      por_unidad: false
+    },
+    {
+      nombre: "Suplemento Tercio de cerveza (Amstel, Cruzcampo)",
+      descripcion: "",
+      precio: "0,50",
+      alergenos: "",
+      por_unidad: false
+    },
+    {
+      nombre: "Suplemento Cremaet",
+      descripcion: "",
+      precio: "1,00",
       alergenos: "",
       por_unidad: false
     }
