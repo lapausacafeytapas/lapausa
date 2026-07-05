@@ -359,7 +359,7 @@ const PRODUCTOS = {
     {
       nombre: "Croquetas",
       descripcion: "Jamón. Manzana y queso gorgonzola. Guarra y miel.",
-      precio: "2,20",
+      precio: "2,20 €/ud.",
       alergenos: "G,L,H",
       por_unidad: true
     },
@@ -438,7 +438,8 @@ const PRODUCTOS = {
       descripcion: "",
       precio: "0,75 €/pax.",
       alergenos: "G",
-      por_unidad: true
+      por_unidad: true,
+      tipo_precio: "pax"
     }
   ],
 
@@ -998,63 +999,3 @@ const PRODUCTOS = {
         precio_copa: "6,00",
         precio_combinado: "8,50",
         alergenos: "",
-        por_unidad: false
-      },
-      {
-        nombre: "Whisky",
-        descripcion: "",
-        precio_chupito: "",
-        precio_copa: "",
-        precio_combinado: "",
-        alergenos: "",
-        por_unidad: false,
-        es_tipo: true
-      },
-      {
-        nombre: "Cutty Shark",
-        descripcion: "",
-        precio_chupito: "2,00",
-        precio_copa: "4,00",
-        precio_combinado: "7,00",
-        alergenos: "",
-        por_unidad: false
-      },
-      {
-        nombre: "Johnnie Walker Red Label",
-        descripcion: "",
-        precio_chupito: "2,50",
-        precio_copa: "6,00",
-        precio_combinado: "9,00",
-        alergenos: "",
-        por_unidad: false
-      },
-      {
-        nombre: "Johnnie Walker Black Label",
-        descripcion: "",
-        precio_chupito: "3,50",
-        precio_copa: "7,50",
-        precio_combinado: "11,00",
-        alergenos: "",
-        por_unidad: false
-      }
-    ]
-  }
-};
-
-// CÓDIGOS DE ALÉRGENOS
-const ALERGENOS = {
-  G: "🌾 Gluten",
-  H: "🥚 Huevo",
-  L: "🥛 Leche",
-  FC: "🥜 Frutos de cáscara",
-  C: "🥜 Cacahuetes",
-  S: "🌱 Soja",
-  P: "🐟 Pescado",
-  CR: "🦐 Crustáceos",
-  M: "🦑 Moluscos",
-  MO: "🌭 Mostaza",
-  SE: "🌾 Sésamo",
-  A: "🥬 Apio",
-  SU: "🧂 Sulfitos",
-  AL: "🌾 Altramuces"
-};
