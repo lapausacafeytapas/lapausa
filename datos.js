@@ -305,16 +305,9 @@ const PRODUCTOS = {
       por_unidad: false
     },
     {
-      nombre: "Helado cono",
+      nombre: "Helado de 1 bola",
       descripcion: "Merienda.",
-      precio: "",
-      alergenos: "L",
-      por_unidad: false
-    },
-    {
-      nombre: "Helado tarrina",
-      descripcion: "Merienda.",
-      precio: "",
+      precio: "2,80",
       alergenos: "L",
       por_unidad: false
     }
