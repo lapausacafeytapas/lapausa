@@ -332,9 +332,16 @@ const PRODUCTOS = {
         por_unidad: false
       },
       {
+        nombre: "Agua de cristal 0,5 L",
+        descripcion: "",
+        precio: "1,50",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
         nombre: "Agua de cristal 1L",
         descripcion: "",
-        precio: "1,75",
+        precio: "2,00",
         alergenos: "",
         por_unidad: false
       },
