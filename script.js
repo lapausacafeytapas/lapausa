@@ -137,13 +137,28 @@ function renderSubcategorias(id) {
   });
 }
 
-function abrirSubcategoria(categoriaId, subcategoriaId, titulo) {
+function obtenerProductosSubcategoria(categoriaId, subcategoriaId) {
   if (categoriaId === 'bebidas') {
-    renderProductos(titulo, PRODUCTOS.bebidas[subcategoriaId] || [], subcategoriaId);
-    return;
+    // Estructura preferida: PRODUCTOS.bebidas.refrescos
+    if (PRODUCTOS?.bebidas && !Array.isArray(PRODUCTOS.bebidas)) {
+      const desdeBebidas = PRODUCTOS.bebidas[subcategoriaId];
+      if (Array.isArray(desdeBebidas)) return desdeBebidas;
+    }
+
+    // Compatibilidad: PRODUCTOS.refrescos en raíz
+    const desdeRaiz = PRODUCTOS[subcategoriaId];
+    if (Array.isArray(desdeRaiz)) return desdeRaiz;
+
+    return [];
   }
 
-  renderProductos(titulo, PRODUCTOS[subcategoriaId] || [], subcategoriaId);
+  const desdeRaiz = PRODUCTOS[subcategoriaId];
+  return Array.isArray(desdeRaiz) ? desdeRaiz : [];
+}
+
+function abrirSubcategoria(categoriaId, subcategoriaId, titulo) {
+  const productos = obtenerProductosSubcategoria(categoriaId, subcategoriaId);
+  renderProductos(titulo, productos, subcategoriaId);
 }
 
 function renderProductos(titulo, productos, claveLeyenda = null) {
