@@ -537,29 +537,6 @@ const PRODUCTOS = {
         por_unidad: false
       }
     ],
-    blancos: [
-      {
-        nombre: "Copa Verdejo",
-        descripcion: "Vino blanco.",
-        precio: "",
-        alergenos: "SU",
-        por_unidad: false
-      },
-      {
-        nombre: "Botella Verdejo",
-        descripcion: "Vino blanco.",
-        precio: "",
-        alergenos: "SU",
-        por_unidad: false
-      },
-      {
-        nombre: "Botella Godello",
-        descripcion: "Vino blanco.",
-        precio: "",
-        alergenos: "SU",
-        por_unidad: false
-      }
-    ],
     tintos: [
       {
         nombre: "Copa Rioja",
@@ -870,43 +847,6 @@ const PRODUCTOS = {
         precio_chupito: "3,50",
         precio_copa: "7,50",
         precio_combinado: "11,00",
-        alergenos: "",
-        por_unidad: false
-      }
-    ],
-    combinados: [
-      {
-        nombre: "Whisky",
-        descripcion: "Con refresco.",
-        precio: "",
-        alergenos: "",
-        por_unidad: false
-      },
-      {
-        nombre: "Ron",
-        descripcion: "Con refresco.",
-        precio: "",
-        alergenos: "",
-        por_unidad: false
-      },
-      {
-        nombre: "Vodka",
-        descripcion: "Con refresco.",
-        precio: "",
-        alergenos: "",
-        por_unidad: false
-      },
-      {
-        nombre: "Ginebra",
-        descripcion: "Con refresco.",
-        precio: "",
-        alergenos: "",
-        por_unidad: false
-      },
-      {
-        nombre: "Ginebra premium",
-        descripcion: "Con refresco.",
-        precio: "",
         alergenos: "",
         por_unidad: false
       }
