@@ -195,7 +195,24 @@ function crearProducto(producto) {
   }
 
   let precioHTML = '';
-  if (producto.precio_copa && producto.precio_botella) {
+  if ('precio_chupito' in producto || 'precio_combinado' in producto) {
+    const columnas = [
+      { etiqueta: 'Chupito', valor: producto.precio_chupito || '' },
+      { etiqueta: 'Copa', valor: producto.precio_copa || '' },
+      { etiqueta: 'Combinado', valor: producto.precio_combinado || '' }
+    ];
+
+    precioHTML = `
+      <div class="producto-precios">
+        ${columnas.map(columna => `
+          <div>
+            <strong>${columna.valor ? `${columna.valor}€` : ''}</strong>
+            <small>${columna.etiqueta}</small>
+          </div>
+        `).join('')}
+      </div>
+    `;
+  } else if (producto.precio_copa && producto.precio_botella) {
     precioHTML = `
       <div class="producto-precios">
         <div>
