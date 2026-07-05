@@ -36,12 +36,14 @@ const ESTRUCTURA_CARTA = {
       { id: 'refrescos', titulo: 'Refrescos' },
       { id: 'cervezas', titulo: 'Cervezas' },
       { id: 'blancos', titulo: 'Vino blanco' },
-      { id: 'tintos', titulo: 'Vino tinto' },
+      { id: 'tintos', titulo: 'Vinos' },
       { id: 'copas', titulo: 'Copas' },
       { id: 'combinados', titulo: 'Combinados' }
     ]
   }
 };
+
+const SUBCATEGORIAS_OCULTAS_BEBIDAS = new Set(['blancos', 'combinados']);
 
 let vistaActual = 'inicio';
 let categoriaActual = null;
@@ -123,7 +125,11 @@ function renderSubcategorias(id) {
   limpiarVistaCarta();
   subcategoriasMenu.classList.remove('oculto');
 
-  categoria.subcategorias.forEach(subcategoria => {
+  const subcategoriasVisibles = id === 'bebidas'
+    ? categoria.subcategorias.filter(subcategoria => !SUBCATEGORIAS_OCULTAS_BEBIDAS.has(subcategoria.id))
+    : categoria.subcategorias;
+
+  subcategoriasVisibles.forEach(subcategoria => {
     const button = document.createElement('button');
     button.textContent = subcategoria.titulo;
     button.onclick = () => abrirSubcategoria(id, subcategoria.id, subcategoria.titulo);
