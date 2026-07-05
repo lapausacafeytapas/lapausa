@@ -140,13 +140,6 @@ const PRODUCTOS = {
       precio: "1,00",
       alergenos: "SU",
       por_unidad: false
-    },
-    {
-      nombre: "Gasto",
-      descripcion: "Si estás trabajando, trae tu bocadillo. Incluye una bebida y café.",
-      precio: "3,00",
-      alergenos: "",
-      por_unidad: false
     }
   ],
 
