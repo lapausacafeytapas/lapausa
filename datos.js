@@ -359,7 +359,7 @@ const PRODUCTOS = {
     {
       nombre: "Croquetas",
       descripcion: "Jamón. Manzana y queso gorgonzola. Guarra y miel.",
-      precio: "2,20 €/ud.",
+      precio: "2,20",
       alergenos: "G,L,H",
       por_unidad: true
     },
