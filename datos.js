@@ -30,7 +30,7 @@ const PRODUCTOS = {
     { nombre: "Carajillo", descripcion: "", precio: "1,80", alergenos: "SU", por_unidad: false },
     { nombre: "Capuccino", descripcion: "", precio: "2,00", alergenos: "L", por_unidad: false },
     { nombre: "Nesquik", descripcion: "", precio: "1,80", alergenos: "L", por_unidad: false },
-    { nombre: "Suplemento del tiempo", descripcion: "", precio: "0,20", alergenos: "", por_unidad: false }
+    //{ nombre: "Suplemento del tiempo", descripcion: "", precio: "0,20", alergenos: "", por_unidad: false }
   ],
 
   desayunos: [
