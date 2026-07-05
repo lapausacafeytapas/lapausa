@@ -599,6 +599,16 @@ const PRODUCTOS = {
     ],
     copas: [
       {
+        nombre: "Licores",
+        descripcion: "",
+        precio_chupito: "",
+        precio_copa: "",
+        precio_combinado: "",
+        alergenos: "",
+        por_unidad: false,
+        es_tipo: true
+      },
+      {
         nombre: "Terry",
         descripcion: "",
         precio_chupito: "1,50",
@@ -635,7 +645,7 @@ const PRODUCTOS = {
         por_unidad: false
       },
       {
-        nombre: "Baylis",
+        nombre: "Bayleis",
         descripcion: "",
         precio_chupito: "",
         precio_copa: "",
@@ -701,7 +711,7 @@ const PRODUCTOS = {
         nombre: "Licor de Mora sin alcohol",
         descripcion: "",
         precio_chupito: "1,50",
-        precio_copa: "",
+        precio_copa: "3,00",
         precio_combinado: "",
         alergenos: "",
         por_unidad: false
@@ -713,7 +723,8 @@ const PRODUCTOS = {
         precio_copa: "",
         precio_combinado: "",
         alergenos: "",
-        por_unidad: false
+        por_unidad: false,
+        es_tipo: true
       },
       {
         nombre: "Seagrams",
@@ -761,7 +772,7 @@ const PRODUCTOS = {
         por_unidad: false
       },
       {
-        nombre: "Beefeater",
+        nombre: "Botanical",
         descripcion: "",
         precio_chupito: "3,50",
         precio_copa: "9,00",
@@ -776,14 +787,15 @@ const PRODUCTOS = {
         precio_copa: "",
         precio_combinado: "",
         alergenos: "",
-        por_unidad: false
+        por_unidad: false,
+        es_tipo: true
       },
       {
         nombre: "Negrita",
         descripcion: "",
-        precio_chupito: "",
-        precio_copa: "",
-        precio_combinado: "",
+        precio_chupito: "1,50",
+        precio_copa: "3,50",
+        precio_combinado: "7,00",
         alergenos: "",
         por_unidad: false
       },
@@ -812,7 +824,8 @@ const PRODUCTOS = {
         precio_copa: "",
         precio_combinado: "",
         alergenos: "",
-        por_unidad: false
+        por_unidad: false,
+        es_tipo: true
       },
       {
         nombre: "Absolut",
@@ -830,7 +843,8 @@ const PRODUCTOS = {
         precio_copa: "",
         precio_combinado: "",
         alergenos: "",
-        por_unidad: false
+        por_unidad: false,
+        es_tipo: true
       },
       {
         nombre: "Cutty Shark",
