@@ -332,36 +332,36 @@ const PRODUCTOS = {
         por_unidad: false
       },
       {
-        nombre: "Agua con gas",
+        nombre: "Agua de cristal 1L",
         descripcion: "",
-        precio: "2,00",
+        precio: "1,75",
         alergenos: "",
         por_unidad: false
       },
       {
-        nombre: "Coca-Cola",
-        descripcion: "Original, Zero y Zero-Zero.",
+        nombre: "Coca Cola",
+        descripcion: "Original, Zero y Zero Zero",
         precio: "2,00",
         alergenos: "",
         por_unidad: false
       },
       {
         nombre: "Fanta",
-        descripcion: "Naranja o limón.",
+        descripcion: "Limón y Naranja",
         precio: "2,00",
         alergenos: "",
         por_unidad: false
       },
       {
         nombre: "Aquarius",
-        descripcion: "Naranja, limón o melocotón.",
+        descripcion: "Limón, Naranja y Melocotón",
         precio: "2,00",
         alergenos: "",
         por_unidad: false
       },
       {
         nombre: "Fuze Tea",
-        descripcion: "",
+        descripcion: "Limón, Té verde con maracuya y Mango con piña",
         precio: "2,00",
         alergenos: "",
         por_unidad: false
@@ -388,16 +388,30 @@ const PRODUCTOS = {
         por_unidad: false
       },
       {
-        nombre: "Zumo Pago",
+        nombre: "AppLetiser",
         descripcion: "",
         precio: "2,00",
         alergenos: "",
         por_unidad: false
       },
       {
-        nombre: "Zumo de naranja natural",
-        descripcion: "Zumo natural.",
-        precio: "3,50",
+        nombre: "Ironic Lemon",
+        descripcion: "",
+        precio: "2,00",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "Zumo Pago",
+        descripcion: "Melocotón, Piña y Tomate",
+        precio: "2,00",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "Zumo Naranja natural",
+        descripcion: "Producto de temporada",
+        precio: "3,75",
         alergenos: "",
         por_unidad: false
       }
