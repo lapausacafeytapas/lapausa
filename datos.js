@@ -189,7 +189,7 @@ const PRODUCTOS = {
       { nombre: "Cazalla", descripcion: "", precio_chupito: "1,50", precio_copa: "3,00", precio_combinado: "", alergenos: "", por_unidad: false },
       { nombre: "Mistela", descripcion: "", precio_chupito: "1,50", precio_copa: "3,00", precio_combinado: "", alergenos: "SU", por_unidad: false },
       { nombre: "Limoncello", descripcion: "", precio_chupito: "2,00", precio_copa: "3,50", precio_combinado: "", alergenos: "", por_unidad: false },
-      { nombre: "Bayleis", descripcion: "", precio_chupito: "", precio_copa: "", precio_combinado: "", alergenos: "L", por_unidad: false },
+      { nombre: "Bayleis", descripcion: "", precio_chupito: "1,50", precio_copa: "3,00", precio_combinado: "", alergenos: "L", por_unidad: false },
       { nombre: "Crema de arroz con leche", descripcion: "", precio_chupito: "1,50", precio_copa: "3,00", precio_combinado: "", alergenos: "L", por_unidad: false },
       { nombre: "Crema de fresa con Tequila", descripcion: "", precio_chupito: "1,50", precio_copa: "3,00", precio_combinado: "", alergenos: "L", por_unidad: false },
       { nombre: "Tequila", descripcion: "", precio_chupito: "1,50", precio_copa: "4,00", precio_combinado: "6,00", alergenos: "", por_unidad: false },
