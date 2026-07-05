@@ -318,28 +318,28 @@ const PRODUCTOS = {
       nombre: "Mix de lechugas con queso de cabra, bacon, nueces, pipas y manzana",
       descripcion: "",
       precio: "9,00",
-      alergenos: "",
+      alergenos: "L,FC,SE",
       por_unidad: false
     },
     {
       nombre: "Melón, crujiente de jamón, lechuga, aceitunas negras y semillas",
       descripcion: "",
       precio: "9,50",
-      alergenos: "",
+      alergenos: "SE",
       por_unidad: false
     },
     {
       nombre: "Bravas",
       descripcion: "",
       precio: "6,00",
-      alergenos: "",
+      alergenos: "H,MO",
       por_unidad: false
     },
     {
       nombre: "Revuelto de trilogía de setas.",
       descripcion: "",
       precio: "5,50",
-      alergenos: "",
+      alergenos: "H,L",
       por_unidad: false
     },
     {
@@ -359,85 +359,85 @@ const PRODUCTOS = {
     {
       nombre: "Croquetas",
       descripcion: "Jamón. Manzana y queso gorgonzola. Guarra y miel.",
-      precio: "2,20 / ud.",
-      alergenos: "",
+      precio: "2,20 €/ud.",
+      alergenos: "G,L,H",
       por_unidad: true
     },
     {
       nombre: "Calamar a la andaluza",
       descripcion: "",
       precio: "12,50",
-      alergenos: "",
+      alergenos: "G,M",
       por_unidad: false
     },
     {
       nombre: "Sepia a la plancha con salsa mery",
       descripcion: "",
       precio: "12,00",
-      alergenos: "",
+      alergenos: "M,MO",
       por_unidad: false
     },
     {
       nombre: "Huevos rotos con sobrasada y miel",
       descripcion: "",
       precio: "7,50",
-      alergenos: "",
+      alergenos: "H",
       por_unidad: false
     },
     {
       nombre: "Huevos rotos con crujiente de jamón",
       descripcion: "",
       precio: "7,50",
-      alergenos: "",
+      alergenos: "H",
       por_unidad: false
     },
     {
       nombre: "Choricitos a la sidra",
       descripcion: "",
       precio: "7,75",
-      alergenos: "",
+      alergenos: "SU",
       por_unidad: false
     },
     {
       nombre: "Dados de solomillo de cerdo con reducción de Pedro Ximénez",
       descripcion: "",
       precio: "9,00",
-      alergenos: "",
+      alergenos: "SU",
       por_unidad: false
     },
     {
       nombre: "Tellinas",
       descripcion: "",
       precio: "13,00",
-      alergenos: "",
+      alergenos: "M",
       por_unidad: false
     },
     {
       nombre: "Fritura de boquerones",
       descripcion: "",
       precio: "6,50",
-      alergenos: "",
+      alergenos: "G,P",
       por_unidad: false
     },
     {
       nombre: "Pechuga rebozada con guarnición de patatas fritas",
       descripcion: "",
       precio: "7,00",
-      alergenos: "",
+      alergenos: "G,H",
       por_unidad: false
     },
     {
       nombre: "Trío de creps",
       descripcion: "Crep de espinacas relleno de queso de cabra, nueces y miel. Crep de zanahoria relleno de jamón y queso emmental. Crep de remolacha relleno de pollo al curry.",
       precio: "12,75",
-      alergenos: "",
+      alergenos: "G,L,H,FC,MO",
       por_unidad: false
     },
     {
       nombre: "Pan en aceite de oliva virgen extra",
       descripcion: "",
-      precio: "0,75 / pax.",
-      alergenos: "",
+      precio: "0,75 €/pax.",
+      alergenos: "G",
       por_unidad: true
     }
   ],
