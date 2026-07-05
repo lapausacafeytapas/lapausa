@@ -599,128 +599,263 @@ const PRODUCTOS = {
     ],
     copas: [
       {
-        nombre: "Copa de vermouth tinto o blanco",
+        nombre: "Terry",
         descripcion: "",
-        precio: "",
+        precio_chupito: "1,50",
+        precio_copa: "3,00",
+        precio_combinado: "",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "Cazalla",
+        descripcion: "",
+        precio_chupito: "1,50",
+        precio_copa: "3,00",
+        precio_combinado: "",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "Mistela",
+        descripcion: "",
+        precio_chupito: "1,50",
+        precio_copa: "3,00",
+        precio_combinado: "",
         alergenos: "SU",
         por_unidad: false
       },
       {
-        nombre: "Copa de coñac",
+        nombre: "Limoncello",
         descripcion: "",
-        precio: "",
+        precio_chupito: "2,00",
+        precio_copa: "3,50",
+        precio_combinado: "",
         alergenos: "",
         por_unidad: false
       },
       {
-        nombre: "Copa de orujo de hierbas",
+        nombre: "Baylis",
         descripcion: "",
-        precio: "",
-        alergenos: "",
-        por_unidad: false
-      },
-      {
-        nombre: "Copa de crema de orujo",
-        descripcion: "",
-        precio: "",
+        precio_chupito: "",
+        precio_copa: "",
+        precio_combinado: "",
         alergenos: "L",
         por_unidad: false
       },
       {
-        nombre: "Copa de orujo blanco",
+        nombre: "Crema de arroz con leche",
         descripcion: "",
-        precio: "",
-        alergenos: "",
-        por_unidad: false
-      },
-      {
-        nombre: "Copa de limoncello",
-        descripcion: "",
-        precio: "",
-        alergenos: "",
-        por_unidad: false
-      },
-      {
-        nombre: "Copa de licor de arroz",
-        descripcion: "",
-        precio: "",
-        alergenos: "",
-        por_unidad: false
-      },
-      {
-        nombre: "Copa de baileys",
-        descripcion: "",
-        precio: "",
+        precio_chupito: "1,50",
+        precio_copa: "3,00",
+        precio_combinado: "",
         alergenos: "L",
         por_unidad: false
       },
       {
-        nombre: "Copa de whisky",
+        nombre: "Crema de fresa con Tequila",
         descripcion: "",
-        precio: "",
+        precio_chupito: "1,50",
+        precio_copa: "3,00",
+        precio_combinado: "",
+        alergenos: "L",
+        por_unidad: false
+      },
+      {
+        nombre: "Tequila",
+        descripcion: "",
+        precio_chupito: "1,50",
+        precio_copa: "4,00",
+        precio_combinado: "6,00",
         alergenos: "",
         por_unidad: false
       },
       {
-        nombre: "Copa de ron",
+        nombre: "Crema de orujo",
         descripcion: "",
-        precio: "",
+        precio_chupito: "2,00",
+        precio_copa: "4,00",
+        precio_combinado: "",
+        alergenos: "L",
+        por_unidad: false
+      },
+      {
+        nombre: "Orujo de hierbas",
+        descripcion: "",
+        precio_chupito: "1,50",
+        precio_copa: "3,00",
+        precio_combinado: "",
         alergenos: "",
         por_unidad: false
       },
       {
-        nombre: "Copa de vodka",
+        nombre: "Anís",
         descripcion: "",
-        precio: "",
+        precio_chupito: "1,50",
+        precio_copa: "3,50",
+        precio_combinado: "",
         alergenos: "",
         por_unidad: false
       },
       {
-        nombre: "Copa de ginebra",
+        nombre: "Licor de Mora sin alcohol",
         descripcion: "",
-        precio: "",
+        precio_chupito: "1,50",
+        precio_copa: "",
+        precio_combinado: "",
         alergenos: "",
         por_unidad: false
       },
       {
-        nombre: "Copa de casalla",
+        nombre: "Ginebra",
         descripcion: "",
-        precio: "",
+        precio_chupito: "",
+        precio_copa: "",
+        precio_combinado: "",
         alergenos: "",
         por_unidad: false
       },
       {
-        nombre: "Copa de anís",
+        nombre: "Seagrams",
         descripcion: "",
-        precio: "",
+        precio_chupito: "2,50",
+        precio_copa: "6,00",
+        precio_combinado: "8,50",
         alergenos: "",
         por_unidad: false
       },
       {
-        nombre: "Copa de mistela",
+        nombre: "Seagrams 0,0 sin alcohol",
         descripcion: "",
-        precio: "",
-        alergenos: "SU",
-        por_unidad: false
-      },
-      {
-        nombre: "Barrejat",
-        descripcion: "Cassalla con mistela",
-        precio: "",
-        alergenos: "SU",
-        por_unidad: false
-      },
-      {
-        nombre: "Chupito",
-        descripcion: "",
-        precio: "",
+        precio_chupito: "2,50",
+        precio_copa: "6,00",
+        precio_combinado: "8,50",
         alergenos: "",
         por_unidad: false
       },
       {
-        nombre: "Vaquerito",
+        nombre: "Tanqueray",
         descripcion: "",
-        precio: "",
+        precio_chupito: "2,50",
+        precio_copa: "6,00",
+        precio_combinado: "8,50",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "Puerto de Indias",
+        descripcion: "",
+        precio_chupito: "2,50",
+        precio_copa: "6,00",
+        precio_combinado: "8,50",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "Nordes",
+        descripcion: "",
+        precio_chupito: "3,00",
+        precio_copa: "7,50",
+        precio_combinado: "11,00",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "Beefeater",
+        descripcion: "",
+        precio_chupito: "3,50",
+        precio_copa: "9,00",
+        precio_combinado: "11,00",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "Ron",
+        descripcion: "",
+        precio_chupito: "",
+        precio_copa: "",
+        precio_combinado: "",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "Negrita",
+        descripcion: "",
+        precio_chupito: "",
+        precio_copa: "",
+        precio_combinado: "",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "Negrita blanco",
+        descripcion: "",
+        precio_chupito: "1,50",
+        precio_copa: "3,50",
+        precio_combinado: "7,00",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "Barceló",
+        descripcion: "",
+        precio_chupito: "2,50",
+        precio_copa: "6,00",
+        precio_combinado: "8,50",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "Vodka",
+        descripcion: "",
+        precio_chupito: "",
+        precio_copa: "",
+        precio_combinado: "",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "Absolut",
+        descripcion: "",
+        precio_chupito: "2,50",
+        precio_copa: "6,00",
+        precio_combinado: "8,50",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "Whisky",
+        descripcion: "",
+        precio_chupito: "",
+        precio_copa: "",
+        precio_combinado: "",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "Cutty Shark",
+        descripcion: "",
+        precio_chupito: "2,00",
+        precio_copa: "4,00",
+        precio_combinado: "7,00",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "Johnnie Walker Red Label",
+        descripcion: "",
+        precio_chupito: "2,50",
+        precio_copa: "6,00",
+        precio_combinado: "9,00",
+        alergenos: "",
+        por_unidad: false
+      },
+      {
+        nombre: "Johnnie Walker Black Label",
+        descripcion: "",
+        precio_chupito: "3,50",
+        precio_copa: "7,50",
+        precio_combinado: "11,00",
         alergenos: "",
         por_unidad: false
       }
