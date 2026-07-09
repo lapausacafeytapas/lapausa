@@ -9,7 +9,7 @@ const CONFIG = {
     lat: 39.4327179748581,
     lng: -0.3915065557790821
   },
-  telefono: "34666840005",
+  telefono: "34652913155",
   instagram: "https://www.instagram.com/la_pausa_cafe_y_tapas?igsh=ZXNxNm5uNjl4MDl5",
   facebook: "https://www.facebook.com/share/1KVNyzWesu/"
 };
