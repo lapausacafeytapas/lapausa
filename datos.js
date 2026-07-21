@@ -111,13 +111,13 @@ const PRODUCTOS = {
     { nombre: "Tellinas", descripcion: "", precio: "13,00", alergenos: "M", por_unidad: false },
     { nombre: "Fritura de boquerones", descripcion: "", precio: "6,50", alergenos: "G,P", por_unidad: false },
     { nombre: "Pechuga rebozada con guarnición de patatas fritas", descripcion: "", precio: "7,00", alergenos: "G,H", por_unidad: false },
-    {
-      nombre: "Trío de creps",
-      descripcion: "Crep de espinacas relleno de queso de cabra, nueces y miel. Crep de zanahoria relleno de jamón y queso emmental. Crep de remolacha relleno de pollo al curry.",
-      precio: "12,75",
-      alergenos: "G,L,H,FC,MO",
-      por_unidad: false
-    },
+    //{
+    //  nombre: "Trío de creps",
+    //  descripcion: "Crep de espinacas relleno de queso de cabra, nueces y miel. Crep de zanahoria relleno de jamón y queso emmental. Crep de remolacha relleno de pollo al curry.",
+    //  precio: "12,75",
+    //  alergenos: "G,L,H,FC,MO",
+    //  por_unidad: false
+   // },
     {
       nombre: "Pan en aceite de oliva virgen extra",
       descripcion: "",
