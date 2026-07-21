@@ -118,14 +118,14 @@ const PRODUCTOS = {
       alergenos: "G,L,H,FC,MO",
       por_unidad: false
     },
-    {
-      nombre: "Pan en aceite de oliva virgen extra",
-      descripcion: "",
-      precio: "0,75",
-      alergenos: "G",
-      por_unidad: true,
-      tipo_precio: "pax"
-    }
+   // {
+   //   nombre: "Pan en aceite de oliva virgen extra",
+   //   descripcion: "",
+   //   precio: "0,75",
+   //   alergenos: "G",
+   //   por_unidad: true,
+   //   tipo_precio: "pax"
+   // }
   ],
 
   bebidas: {
