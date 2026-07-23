@@ -14,7 +14,7 @@ const ESTRUCTURA_CARTA = {
     subcategorias: [
       { id: 'desayunos', titulo: 'Desayunos' },
       { id: 'almuerzos', titulo: 'Almuerzos' },
-      { id: 'bocadillosdecarta', titulo: 'Bocadillos de carta' },
+     // { id: 'bocadillosdecarta', titulo: 'Bocadillos de carta' },
       { id: 'menudeldia', titulo: 'Menú del día' }
     ]
   },
