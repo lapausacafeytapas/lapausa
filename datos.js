@@ -74,9 +74,9 @@ const PRODUCTOS = {
     { nombre: "Sándwich vegetal", descripcion: "Lechuga, tomate, mahonesa, atún, aceitunas y huevo duro.", precio: "", alergenos: "G,H,P", por_unidad: false }
     
   ],
-
+/*
   bocadillosdecarta: [
-  /*
+  
   { nombre: "Pau", descripcion: "Lomo, queso, bacon y huevo frito.", precio: "", alergenos: "G,L,H", por_unidad: false },
     { nombre: "Chivito", descripcion: "Lomo/pechuga, bacon, queso, tomate, lechuga, huevo y mayonesa.", precio: "", alergenos: "G,L,H", por_unidad: false },
     { nombre: "Brascada", descripcion: "Ternera, jamón y cebolla caramelizada.", precio: "", alergenos: "G", por_unidad: false },
@@ -91,9 +91,9 @@ const PRODUCTOS = {
     { nombre: "Francés", descripcion: "Tomate, tortilla francesa y jamón.", precio: "", alergenos: "G,H", por_unidad: false },
     { nombre: "Sándwich mixto", descripcion: "", precio: "", alergenos: "G,L", por_unidad: false },
     { nombre: "Sándwich vegetal", descripcion: "Lechuga, tomate, mahonesa, atún, aceitunas y huevo duro.", precio: "", alergenos: "G,H,P", por_unidad: false } 
-*/
-  ],
 
+  ],
+*/
   menudeldia: [
     { nombre: "Menú completo", descripcion: "Incluye, primero, segundo, bebida, postre y café", precio: "13,00", alergenos: "", por_unidad: false },
     { nombre: "Medio menú", descripcion: "Incluye un primero/segundo, bebida, postre y café", precio: "11,00", alergenos: "", por_unidad: false },
