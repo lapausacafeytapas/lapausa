@@ -55,6 +55,8 @@ const PRODUCTOS = {
 
   almuerzos: [
     { nombre: "Bocadillo del día", descripcion: "Nuestra propuesta de hoy.", precio: "6,50", alergenos: "G", por_unidad: false },
+    { nombre: "Suplemento Tercio de cerveza", descripcion: "Amstel, Mahou o Cruzcampo.", precio: "0,50", alergenos: "G", por_unidad: false },
+    { nombre: "Suplemento Cremaet", descripcion: "", precio: "1,00", alergenos: "SU", por_unidad: false } ,
     //{ nombre: "Bocadillo de carta", descripcion: "Elige uno de la lista.", precio: "7,50", alergenos: "G", por_unidad: false },
     { nombre: "Pau", descripcion: "Lomo, queso, bacon y huevo frito.", precio: "", alergenos: "G,L,H", por_unidad: false },
     { nombre: "Chivito", descripcion: "Lomo/pechuga, bacon, queso, tomate, lechuga, huevo y mayonesa.", precio: "", alergenos: "G,L,H", por_unidad: false },
@@ -69,9 +71,8 @@ const PRODUCTOS = {
     { nombre: "Blanc i negre", descripcion: "Longaniza con morcilla.", precio: "", alergenos: "G", por_unidad: false },
     { nombre: "Francés", descripcion: "Tomate, tortilla francesa y jamón.", precio: "", alergenos: "G,H", por_unidad: false },
     { nombre: "Sándwich mixto", descripcion: "", precio: "", alergenos: "G,L", por_unidad: false },
-    { nombre: "Sándwich vegetal", descripcion: "Lechuga, tomate, mahonesa, atún, aceitunas y huevo duro.", precio: "", alergenos: "G,H,P", por_unidad: false } ,
-    { nombre: "Suplemento Tercio de cerveza", descripcion: "Amstel, Mahou o Cruzcampo.", precio: "0,50", alergenos: "G", por_unidad: false },
-    { nombre: "Suplemento Cremaet", descripcion: "", precio: "1,00", alergenos: "SU", por_unidad: false }
+    { nombre: "Sándwich vegetal", descripcion: "Lechuga, tomate, mahonesa, atún, aceitunas y huevo duro.", precio: "", alergenos: "G,H,P", por_unidad: false }
+    
   ],
 
   bocadillosdecarta: [
