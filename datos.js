@@ -55,12 +55,7 @@ const PRODUCTOS = {
 
   almuerzos: [
     { nombre: "Bocadillo del día", descripcion: "Nuestra propuesta de hoy.", precio: "6,50", alergenos: "G", por_unidad: false },
-    { nombre: "Bocadillo de carta", descripcion: "Elige uno de la lista.", precio: "7,50", alergenos: "G", por_unidad: false },
-    { nombre: "Suplemento Tercio de cerveza", descripcion: "Amstel, Mahou o Cruzcampo.", precio: "0,50", alergenos: "G", por_unidad: false },
-    { nombre: "Suplemento Cremaet", descripcion: "", precio: "1,00", alergenos: "SU", por_unidad: false }
-  ],
-
-  bocadillosdecarta: [
+    //{ nombre: "Bocadillo de carta", descripcion: "Elige uno de la lista.", precio: "7,50", alergenos: "G", por_unidad: false },
     { nombre: "Pau", descripcion: "Lomo, queso, bacon y huevo frito.", precio: "", alergenos: "G,L,H", por_unidad: false },
     { nombre: "Chivito", descripcion: "Lomo/pechuga, bacon, queso, tomate, lechuga, huevo y mayonesa.", precio: "", alergenos: "G,L,H", por_unidad: false },
     { nombre: "Brascada", descripcion: "Ternera, jamón y cebolla caramelizada.", precio: "", alergenos: "G", por_unidad: false },
@@ -74,7 +69,28 @@ const PRODUCTOS = {
     { nombre: "Blanc i negre", descripcion: "Longaniza con morcilla.", precio: "", alergenos: "G", por_unidad: false },
     { nombre: "Francés", descripcion: "Tomate, tortilla francesa y jamón.", precio: "", alergenos: "G,H", por_unidad: false },
     { nombre: "Sándwich mixto", descripcion: "", precio: "", alergenos: "G,L", por_unidad: false },
-    { nombre: "Sándwich vegetal", descripcion: "Lechuga, tomate, mahonesa, atún, aceitunas y huevo duro.", precio: "", alergenos: "G,H,P", por_unidad: false }
+    { nombre: "Sándwich vegetal", descripcion: "Lechuga, tomate, mahonesa, atún, aceitunas y huevo duro.", precio: "", alergenos: "G,H,P", por_unidad: false } ,
+    { nombre: "Suplemento Tercio de cerveza", descripcion: "Amstel, Mahou o Cruzcampo.", precio: "0,50", alergenos: "G", por_unidad: false },
+    { nombre: "Suplemento Cremaet", descripcion: "", precio: "1,00", alergenos: "SU", por_unidad: false }
+  ],
+
+  bocadillosdecarta: [
+  /*
+  { nombre: "Pau", descripcion: "Lomo, queso, bacon y huevo frito.", precio: "", alergenos: "G,L,H", por_unidad: false },
+    { nombre: "Chivito", descripcion: "Lomo/pechuga, bacon, queso, tomate, lechuga, huevo y mayonesa.", precio: "", alergenos: "G,L,H", por_unidad: false },
+    { nombre: "Brascada", descripcion: "Ternera, jamón y cebolla caramelizada.", precio: "", alergenos: "G", por_unidad: false },
+    { nombre: "Vegetal", descripcion: "Lechuga, tomate, mahonesa, atún, aceitunas y huevo duro.", precio: "", alergenos: "G,H,P", por_unidad: false },
+    { nombre: "Almussafes", descripcion: "Sobrasada, queso y cebolla caramelizada.", precio: "", alergenos: "G,L", por_unidad: false },
+    { nombre: "El pecador", descripcion: "Chistorra con patatas y huevo frito.", precio: "", alergenos: "G,H", por_unidad: false },
+    { nombre: "Clásico", descripcion: "Tortilla de patata con mahonesa/ajoaceite.", precio: "", alergenos: "G,H", por_unidad: false },
+    { nombre: "El de la Terreta", descripcion: "Longanizas con patatas.", precio: "", alergenos: "G", por_unidad: false },
+    { nombre: "Manchego", descripcion: "Oreja a la plancha con salsa mery.", precio: "", alergenos: "G,MO", por_unidad: false },
+    { nombre: "Pastor", descripcion: "Bacon, queso de cabra y pimientos verdes.", precio: "", alergenos: "G,L", por_unidad: false },
+    { nombre: "Blanc i negre", descripcion: "Longaniza con morcilla.", precio: "", alergenos: "G", por_unidad: false },
+    { nombre: "Francés", descripcion: "Tomate, tortilla francesa y jamón.", precio: "", alergenos: "G,H", por_unidad: false },
+    { nombre: "Sándwich mixto", descripcion: "", precio: "", alergenos: "G,L", por_unidad: false },
+    { nombre: "Sándwich vegetal", descripcion: "Lechuga, tomate, mahonesa, atún, aceitunas y huevo duro.", precio: "", alergenos: "G,H,P", por_unidad: false } 
+*/
   ],
 
   menudeldia: [
