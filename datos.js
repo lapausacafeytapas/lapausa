@@ -96,7 +96,6 @@ const PRODUCTOS = {
 
   viernesysabado: [
     { nombre: "Mix de lechugas con queso de cabra, bacon, nueces, pipas y manzana", descripcion: "", precio: "9,00", alergenos: "L,FC,SE", por_unidad: false },
-    { nombre: "Melón, crujiente de jamón, lechuga, aceitunas negras y semillas", descripcion: "", precio: "9,50", alergenos: "SE", por_unidad: false },
     { nombre: "Bravas", descripcion: "", precio: "6,00", alergenos: "H,MO", por_unidad: false },
     { nombre: "Revuelto de trilogía de setas.", descripcion: "", precio: "5,50", alergenos: "H,L", por_unidad: false },
     { nombre: "Alcachofas confitadas con crujiente de jamón (2 ud)", descripcion: "", precio: "6,00", alergenos: "", por_unidad: false },
