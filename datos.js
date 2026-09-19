@@ -34,20 +34,8 @@ const PRODUCTOS = {
   ],
 
   desayunos: [
-    {
-      nombre: "Tostada tradicional",
-      descripcion: "Aceite, tomate o mantequilla y mermelada.",
-      precio: "2,80",
-      alergenos: "G,L",
-      por_unidad: false
-    },
-    {
-      nombre: "Tostada especial",
-      descripcion: "Tomate con atún, tomate con jamón, queso crema y salmón ahumado.",
-      precio: "3,80",
-      alergenos: "G,L,P",
-      por_unidad: false
-    },
+    { nombre: "Tostada tradicional", descripcion: "Aceite, tomate o mantequilla y mermelada.", precio: "2,80", alergenos: "G,L", por_unidad: false },
+    { nombre: "Tostada especial", descripcion: "Tomate con atún, tomate con jamón, queso crema y salmón ahumado.", precio: "3,80", alergenos: "G,L,P", por_unidad: false },
     { nombre: "Desayuno dulce", descripcion: "Una pieza de bollería dulce.", precio: "2,80", alergenos: "G,L,H", por_unidad: false },
     { nombre: "Desayuno salado", descripcion: "Una pieza de bollería salada.", precio: "3,20", alergenos: "G,L,H", por_unidad: false },
     { nombre: "Suplemento zumo de naranja natural", descripcion: "Producto de temporada.", precio: "1,50", alergenos: "", por_unidad: false }
@@ -117,14 +105,14 @@ const PRODUCTOS = {
       alergenos: "G,L,H,FC,MO",
       por_unidad: false
     },
-   // {
-   //   nombre: "Pan en aceite de oliva virgen extra",
-   //   descripcion: "",
-   //   precio: "0,75",
-   //   alergenos: "G",
-   //   por_unidad: true,
-   //   tipo_precio: "pax"
-   // }
+    // {
+    //   nombre: "Pan en aceite de oliva virgen extra",
+    //   descripcion: "",
+    //   precio: "0,75",
+    //   alergenos: "G",
+    //   por_unidad: true,
+    //   tipo_precio: "pax"
+    // }
   ],
 
   bebidas: {
